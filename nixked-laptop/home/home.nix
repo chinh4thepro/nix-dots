@@ -1,0 +1,1 @@
+/home/chinh4thepro/.config/home-manager/home.nix
