@@ -173,6 +173,13 @@
     config = {
       allowUnfree = true;
     };
+    overlays = [
+      (self: super: {
+        waybar = super.waybar.overrideAttrs (oldAttrs: {
+          mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
+        });
+      })
+    ];
   };
 
   nix = {
@@ -217,6 +224,7 @@
     gnome.file-roller
     dconf
     gnome.dconf-editor
+    libsForQt5.spectacle
     
     # Terminal
     kitty
