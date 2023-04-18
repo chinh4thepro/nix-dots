@@ -1,2 +1,3 @@
 # nixos-dots
-IDFK WHAT IM DOING AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
+## Don't use anything from here, it's most likely garbage
