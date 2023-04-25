@@ -227,12 +227,14 @@
       '';
       ".config/hypr/hyprland.conf".text = ''
         monitor=,preferred,auto,1
-        
+
         exec-once = dbus-update-activation-environment --systemd DISPLAY
+        exec-once = brightnessctl set 10%
         exec-once = eval $(gnome-keyring-daemon --start --components=ssh)
         exec-once = eval $(ssh-agent)
         exec-once = nm-applet --indicator
         exec-once = waybar & swww init
+        exec-once = fcitx5
 
         env = XCURSOR_SIZE,24
         env = NIXOS_OZONE_WL,1
@@ -252,6 +254,9 @@
         env = SDL_VIDEODRIVER,wayland
         env = CLUTTER_BACKEND,wayland
         env = WLR_DRM_DEVICES,/dev/dri/card0
+        env = GTK_IM_MODULE,fcitx
+        env = XMODIFIERS,@im=fcitx
+        env = QT_IM_MODULE,fcitx
 
         input {
           kb_layout = us
@@ -374,10 +379,10 @@
         bind = $mainMod SHIFT, 0, movetoworkspace, 10
 
         # Brightness and volume
-        bind = ,XF86MonBrightnessUp, exec, brightnessctl set 5%+
-        bind = ,XF86MonBrightnessDown, exec, brightnessctl set 5%-
-        bind = ,XF86AudioRaiseVolume, exec, pactl set-sink-volume @DEFAULT_SINK@ +5%
-        bind = ,XF86AudioLowerVolume, exec, pactl set-sink-volume @DEFAULT_SINK@ -5%
+        bind = ,XF86MonBrightnessUp, exec, brightnessctl set 2%+
+        bind = ,XF86MonBrightnessDown, exec, brightnessctl set 2%-
+        bind = ,XF86AudioRaiseVolume, exec, pactl set-sink-volume @DEFAULT_SINK@ +2%
+        bind = ,XF86AudioLowerVolume, exec, pactl set-sink-volume @DEFAULT_SINK@ -2%
         bind = ,XF86AudioMute, exec, pactl set-sink-mute @DEFAULT_SINK@ toggle
         bind = ,XF86AudioMicMute, exec, pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
