@@ -233,7 +233,7 @@
         exec-once = eval $(gnome-keyring-daemon --start --components=ssh)
         exec-once = eval $(ssh-agent)
         exec-once = nm-applet --indicator
-        exec-once = waybar & swww init
+        exec-once = waybar & swww init && swww img /home/$USER/Pictures/wallpapers/afar.jpg
         exec-once = fcitx5
 
         env = XCURSOR_SIZE,24
@@ -340,7 +340,7 @@
         $mainMod = ALT
 
         # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
-        bind = $mainMod, Return, exec, kitty
+        bind = $mainMod, Return, exec, foot
         bind = $mainMod_SHIFT, Q, killactive, 
         bind = $mainMod_SHIFT, E, exit, 
         bind = $mainMod_SHIFT, V, togglefloating,

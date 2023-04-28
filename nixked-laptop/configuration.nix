@@ -227,7 +227,7 @@
     libsForQt5.spectacle
     
     # Terminal
-    kitty
+    foot
 
     # Audio
     pulseaudio
