@@ -2,113 +2,416 @@
 {
   home = {
     file = {
-      ".config/wofi/style.css".text = ''
-        @import '.config/wofi/colors.css';
-        /* ::root{ */
-        /*     --accent: #5291e2; */
-        /*     --dark: #383C4A; */
-        /*     --light: #7C818C; */
-        /*     --ld: #404552; */
-        /*     --dl: #4B5162 */
-        /*     --white: white; */
-        /* } */
+      ".config/neofetch/config.conf".text = ''
+        print_info() {
+            info title
+            info underline
 
-        *{
-          font-family: fantasque sans mono;
-          font-size: 20px;
+            info "OS" distro
+            info "Host" model
+            info "Kernel" kernel
+            info "Uptime" uptime
+            info "Packages" packages
+            info "Shell" shell
+            info "Resolution" resolution
+            info "DE" de
+            info "WM" wm
+            info "WM Theme" wm_theme
+            info "Theme" theme
+            info "Icons" icons
+            info "Terminal" term
+            info "CPU" cpu
+            info "GPU" gpu
+            info "Memory" memory
+            info "Disk" disk
+
+            # info "GPU Driver" gpu_driver  # Linux/macOS only
+            # info "Song" song
+
+            info cols
+        }
+
+        # Title
+        title_fqdn="off"
+
+
+        # Kernel
+        kernel_shorthand="on"
+
+
+        # Distro
+        distro_shorthand="on"
+        os_arch="on"
+
+
+        # Uptime
+        uptime_shorthand="on"
+
+        # Memory
+        memory_percent="off"
+        memory_unit="mib"
+
+        # Packages
+        package_managers="on"
+
+        # Shell
+        shell_path="off"
+        shell_version="off"
+
+        # CPU
+
+        # Values: 'scaling_cur_freq', 'scaling_min_freq', 'scaling_max_freq', 'bios_limit'.
+        speed_type="bios_limit"
+        speed_shorthand="on"
+        cpu_brand="on"
+        cpu_speed="on"
+        cpu_cores="logical"
+
+        # Values:  'C', 'F', 'off'
+        cpu_temp="off"
+
+        # GPU
+        gpu_brand="on"
+        gpu_type="all"
+
+        # Resolution
+        refresh_rate="off"
+
+
+        # Gtk Theme / Icons / Font
+        gtk_shorthand="on"
+        gtk2="on"
+        gtk3="on"
+
+        # Desktop Environment
+        de_version="on"
+
+        # Disk
+        disk_show=('/')
+        disk_subtitle="mount"
+        disk_percent="on"
+
+        # Song
+        music_player="auto"
+
+        # Values:  '%artist%', '%album%', '%title%'
+        song_format="%title$ - %album% - %artist%"
+        song_shorthand="off"
+        mpc_args=()
+
+        # Text Colors
+        colors=(distro)
+        bold="on"
+        underline_enabled="on"
+        underline_char="-"
+
+        separator=" -"
+
+        # Color Blocks
+        block_range=(0 15)
+        color_blocks="on"
+        block_width=3
+        block_height=1
+        col_offset="auto"
+
+        # Progress Bars
+        bar_char_elapsed="-"
+        bar_char_total="="
+        bar_border="on"
+        bar_length=15
+        bar_color_elapsed="distro"
+        bar_color_total="distro"
+
+        memory_display="off"
+        battery_display="off"
+        disk_display="off"
+
+        # Backend Settings
+
+        # Image backend.
+        image_backend="sixel"
+        image_source="/home/$USER/Pictures/neofetch-images/yotsuba.png"
+
+        # Ascii Options
+        ascii_distro="auto"
+        ascii_colors=(distro)
+        ascii_bold="on"
+
+        # Image Options
+        image_loop="off"
+
+        # Values:   'normal', 'fit', 'fill'
+        crop_mode="normal"
+
+        # Values:   'northwest', 'north', 'northeast', 'west', 'center'
+        crop_offset="center"
+
+        # Values:  'auto', '00px', '00%', 'none'
+        image_size="15%"
+
+        gap=2
+      '';
+      
+      ".config/dunst/dunstrc".text = ''
+        [global]
+        notification_limit = 5
+        corner_radius = 5
+        origin = top-right
+        offset = 5x5
+        frame_color = "#8CAAEE"
+        separator_color= frame
+
+        [urgency_low]
+        background = "#303446"
+        foreground = "#C6D0F5"
+
+        [urgency_normal]
+        background = "#303446"
+        foreground = "#C6D0F5"
+
+        [urgency_critical]
+        background = "#303446"
+        foreground = "#C6D0F5"
+        frame_color = "#EF9F76"
+      '';
+
+      ".config/wofi/style.css".text = ''
+        * {
+          font-family: FontAwesome, Fantasque Sans Mono;
+          font-size: 14px;
         }
 
         window {
-          background-color: @color2;
-        }
-
-        #input {
           margin: 5px;
-          border-radius: 0px;
-          border: none;
-          border-bottom: 3px solid black;
-          background-color: @color8;
-          color: white;
+          background-color: #303446;
+          border-radius: 5px;
+          color: #c6d0f5;
         }
 
         #inner-box {
-          background-color: @color8;
+          padding: 0px 10px;
         }
 
         #outer-box {
-          margin: 5px;
-          padding:20px;
-          background-color: @color8;
+          border-radius: 5px;
+          background-color: #303446;
+          border: 2px solid #232634;
+        }
+
+        #entry {
+          border-radius: 0px; 
+        }
+          
+        #entry:selected {
+          color: #303446;
+          border: 2px solid #292c3c;
+          border-radius: 5px;
+          background-color: #8caaee;
+        }
+
+        #input {
+          margin-top: 10px;
+          margin-bottom: 10px;
+          margin-right: 10px;
+          margin-left: 10px;
+          padding: 10px 10px;
+          border: 2px solid #292c3c;
+          background-color: #414559;
         }
 
         #scroll {
+          border: 2px solid #292c3c;
+          background-color: #414559;
+          margin-bottom: 10px;
+          margin-right: 10px;
+          margin-left: 10px;
+          border-radius: 5px;
+          padding: 20px 10px;
         }
 
-        #text {
-          padding: 5px;
-          color: white;
-        }
-
-        #entry:selected {
-          background-color: @color2;
-        }
       '';
-      ".config/wofi/colors.css".text = ''
-        @define-color foreground #ffffff; 
-        @define-color background #0e0e0e;
-        @define-color cursor #bf9c9c;
 
-        @define-color color0 #0e0e0e;
-        @define-color color1 #CCCCCC;
-        @define-color color2 #E8E8E8;
-        @define-color color3 #A8A8A8;
-        @define-color color4 #f3f3f3;
-        @define-color color5 #B8B8B8;
-        @define-color color6 #979797;
-        @define-color color7 #F5F5F5;
-        @define-color color8 #272727;
-        @define-color color9 #ffe5e5;
-        @define-color color10 #ffe5e5;
-        @define-color color11 #f0c4c4;
-        @define-color color12 #ffe5e5;
-        @define-color color13 #ffd7d7;
-        @define-color color14 #d7b0b0;
-        @define-color color15 #ffffff;
-      '';
-      ".config/waybar/colors.css".text = ''
-        @define-color foreground #ffffff; 
-        @define-color background #0e0e0e;
-        @define-color cursor #bf9c9c;
+      ".config/foot/foot.ini".text = ''
+        # app-id=foot
+        # title=foot
+        # locked-title=no
 
-        @define-color color0 #0e0e0e;
-        @define-color color1 #CCCCCC;
-        @define-color color2 #E8E8E8;
-        @define-color color3 #A8A8A8;
-        @define-color color4 #f3f3f3;
-        @define-color color5 #B8B8B8;
-        @define-color color6 #979797;
-        @define-color color7 #F5F5F5;
-        @define-color color8 #272727;
-        @define-color color9 #ffe5e5;
-        @define-color color10 #ffe5e5;
-        @define-color color11 #f0c4c4;
-        @define-color color12 #ffe5e5;
-        @define-color color13 #ffd7d7;
-        @define-color color14 #d7b0b0;
-        @define-color color15 #ffffff;
+        font=fantasque sans mono:size=10
+        # font-bold=<bold variant of regular font>
+        # font-italic=<italic variant of regular font>
+        # font-bold-italic=<bold+italic variant of regular font>
+        # font-size-adjustment=0.5
+        # line-height=<font metrics>
+        # letter-spacing=0
+        # horizontal-letter-offset=0
+        # vertical-letter-offset=0
+        # underline-offset=<font metrics>
+        # underline-thickness=<font underline thickness>
+        # box-drawings-uses-font-glyphs=no
+        # dpi-aware=auto
+
+        initial-window-mode=windowed
+        # pad=0x0                             # optionally append 'center'
+        # resize-delay-ms=100
+
+        # bold-text-in-bright=no
+        # word-delimiters=,│`|:"'()[]{}<>
+        # selection-target=primary
+        # workers=<number of logical CPUs>
+        # utempter=/usr/lib/utempter/utempter
+
+        [bell]
+        urgent=no
+        notify=no
+
+        [scrollback]
+        # lines=1000
+        # multiplier=3.0
+        # indicator-position=relative
+        # indicator-format=""
+
+        [cursor]
+        # style=block
+        # color=<inverse foreground/background>
+        # blink=no
+        # beam-thickness=1.5
+        # underline-thickness=<font underline thickness>
+
+        [mouse]
+        # hide-when-typing=no
+        # alternate-scroll-mode=yes
+
+        [colors]
+        alpha=0.50
+        foreground=c6d0f5 # Text
+        background=303446 # Base
+        regular0=51576d   # Surface 1
+        regular1=e78284   # red
+        regular2=a6d189   # green
+        regular3=e5c890   # yellow
+        regular4=8caaee   # blue
+        regular5=f4b8e4   # pink
+        regular6=81c8be   # teal
+        regular7=b5bfe2   # Subtext 1
+        bright0=626880    # Surface 2
+        bright1=e78284    # red
+        bright2=a6d189    # green
+        bright3=e5c890    # yellow
+        bright4=8caaee    # blue
+        bright5=f4b8e4    # pink
+        bright6=81c8be    # teal
+        bright7=a5adce    # Subtext 0
+
+        ## The remaining 256-color palette
+        # 16 = <256-color palette #16>
+        # ...
+        # 255 = <256-color palette #255>
+
+        ## Misc colors
+        # selection-foreground=<inverse foreground/background>
+        # selection-background=<inverse foreground/background>
+        # jump-labels=<regular0> <regular3>          # black-on-yellow
+        # scrollback-indicator=<regular0> <bright4>  # black-on-bright-blue
+        # search-box-no-match=<regular0> <regular1>  # black-on-red
+        # search-box-match=<regular0> <regular3>     # black-on-yellow
+        # urls=<regular3>
+
+        [csd]
+        # preferred=server
+        # size=26
+        # font=<primary font>
+        # color=<foreground color>
+        # hide-when-typing=no
+        # border-width=0
+        # border-color=<csd.color>
+        # button-width=26
+        # button-color=<background color>
+        # button-minimize-color=<regular4>
+        # button-maximize-color=<regular2>
+        # button-close-color=<regular1>
+
+        [key-bindings]
+        # scrollback-up-page=Shift+Page_Up
+        # scrollback-up-half-page=none
+        # scrollback-up-line=none
+        # scrollback-down-page=Shift+Page_Down
+        # scrollback-down-half-page=none
+        # scrollback-down-line=none
+        # clipboard-copy=Control+Shift+c XF86Copy
+        # clipboard-paste=Control+Shift+v XF86Paste
+        # primary-paste=Shift+Insert
+        # search-start=Control+Shift+r
+        # font-increase=Control+plus Control+equal Control+KP_Add
+        # font-decrease=Control+minus Control+KP_Subtract
+        # font-reset=Control+0 Control+KP_0
+        # spawn-terminal=Control+Shift+n
+        # minimize=none
+        # maximize=none
+        # fullscreen=none
+        # pipe-visible=[sh -c "xurls | fuzzel | xargs -r firefox"] none
+        # pipe-scrollback=[sh -c "xurls | fuzzel | xargs -r firefox"] none
+        # pipe-selected=[xargs -r firefox] none
+        # show-urls-launch=Control+Shift+u
+        # show-urls-copy=none
+        # show-urls-persistent=none
+        # prompt-prev=Control+Shift+z
+        # prompt-next=Control+Shift+x
+        # unicode-input=none
+        # noop=none
+
+        [search-bindings]
+        # cancel=Control+g Control+c Escape
+        # commit=Return
+        # find-prev=Control+r
+        # find-next=Control+s
+        # cursor-left=Left Control+b
+        # cursor-left-word=Control+Left Mod1+b
+        # cursor-right=Right Control+f
+        # cursor-right-word=Control+Right Mod1+f
+        # cursor-home=Home Control+a
+        # cursor-end=End Control+e
+        # delete-prev=BackSpace
+        # delete-prev-word=Mod1+BackSpace Control+BackSpace
+        # delete-next=Delete
+        # delete-next-word=Mod1+d Control+Delete
+        # extend-to-word-boundary=Control+w
+        # extend-to-next-whitespace=Control+Shift+w
+        # clipboard-paste=Control+v Control+Shift+v Control+y XF86Paste
+        # primary-paste=Shift+Insert
+        # unicode-input=none
+
+        [url-bindings]
+        # cancel=Control+g Control+c Control+d Escape
+        # toggle-url-visible=t
+
+        [text-bindings]
+        # \x03=Mod4+c  # Map Super+c -> Ctrl+c
+
+        [mouse-bindings]
+        # selection-override-modifiers=Shift
+        # primary-paste=BTN_MIDDLE
+        # select-begin=BTN_LEFT
+        # select-begin-block=Control+BTN_LEFT
+        # select-extend=BTN_RIGHT
+        # select-extend-character-wise=Control+BTN_RIGHT
+        # select-word=BTN_LEFT-2
+        # select-word-whitespace=Control+BTN_LEFT-2
+        # select-row=BTN_LEFT-3
+
+        # vim: ft=dosini
       '';
+
       ".config/waybar/style.css".text = ''
-        @import 'colors.css' ;
         * {
           font-family: FontAwesome, Fantasque Sans Mono;
           font-size: 14px;
         }
 
         window#waybar {
-          background-color: @color8;
-          color: @color15;
+          background-color: rgba(48, 52, 70, 0.5);
+          color: #ffffff;
           transition-property: background-color;
-          transition-duration: .5s; 
+          transition-duration: 0.5s; 
         }
 
         #clock,
@@ -123,11 +426,32 @@
         #tray,
         #mode,
         #window,
-        #workspaces,
         #workspaces button
         {
-           margin: 3px 0;
-            color: @color15;
+          color: #ffffff;
+          border-radius: 5px;
+          padding: 2px 9px;
+          background-color: #414559;
+          font-size: 14px;
+
+          margin-left: 5px;
+          margin-right: 5px;
+
+          margin-top: 5px;
+          margin-bottom: 5px;
+        }
+
+        #workspaces
+        {
+          color: #ffffff;
+          border-radius: 5px;
+          padding: 2px 3.5px;
+          background-color: #414559;
+
+          margin-left: 5px;
+          margin-right: 5px;
+          margin-top: 5px;
+          margin-bottom: 5px;
         }
 
         #clock,
@@ -143,9 +467,10 @@
         #temperature,
         #tray
         {
-          color: @color15;
+          color: #c6d0f5;
         }
       '';
+
       ".config/waybar/config".text = ''
         {
             "height": 50,
@@ -219,12 +544,12 @@
 	        "tooltip": false,
             },
             "custom/space": {
-    	        "format": "  ",
+    	        "format": " ",
 	        "tooltip": false,
             },
         }
-
       '';
+
       ".config/hypr/hyprland.conf".text = ''
         monitor=,preferred,auto,1
 
@@ -258,6 +583,8 @@
         env = XMODIFIERS,@im=fcitx
         env = QT_IM_MODULE,fcitx
 
+        blurls = waybar
+
         input {
           kb_layout = us
           kb_variant =
@@ -268,14 +595,15 @@
           follow_mouse = 1
 
           touchpad {
+            disable_while_typing = 0
             natural_scroll = no
+            tap-to-click = 1
           }
 
           sensitivity = 0 # -1.0 - 1.0, 0 means no modification.
         }
 
         general {
-        # See https://wiki.hyprland.org/Configuring/Variables/ for more
 
           gaps_in = 5
           gaps_out = 20
@@ -289,14 +617,14 @@
 
           rounding = 5
           blur = yes
-          blur_size = 3
-          blur_passes = 1
+          blur_size = 13
+          blur_passes = 3
           blur_new_optimizations = on
 
           drop_shadow = yes
-          shadow_range = 4
+          shadow_range = 20
           shadow_render_power = 3
-          col.shadow = rgba(1a1a1aee)
+          col.shadow = 85c1dc
         }
 
         animations {

@@ -65,13 +65,15 @@
     neovim = {
       enable = true;
       vimAlias = true;
-      plugins = [
-        pkgs.vimPlugins.vim-nix
+      plugins = with pkgs; [
+        vimPlugins.vim-nix
+        vimPlugins.catppuccin-nvim
       ];
     };
     zsh = {
       enable = true;
       enableSyntaxHighlighting = true;
+      enableAutosuggestions = true;
       oh-my-zsh = {
         enable = true;
         theme = "gentoo";
@@ -92,6 +94,26 @@
       enable = true;
       userName = "chinh4thepro";
       userEmail = "chinh4thepro@gmail.com";
+    };
+  };
+
+  gtk = {
+    enable = true;
+    iconTheme = {
+      name = "Papirus";
+      package = pkgs.catppuccin-papirus-folders.override {
+        flavor = "latte";
+        accent = "blue";
+
+      };
+    };
+    theme = {
+      name = "Catppuccin-Frappe-Compact-Blue-Dark";
+      package = pkgs.catppuccin-gtk.override {
+        accents = [ "blue" ];
+        size = "compact";
+        variant = "frappe";
+      };
     };
   };
 

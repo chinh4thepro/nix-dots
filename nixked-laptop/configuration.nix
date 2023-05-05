@@ -49,17 +49,6 @@
 
   i18n = {
     defaultLocale = "en_US.UTF-8";
-    inputMethod = {
-      enabled = "fcitx5";
-      fcitx5 = {
-        addons = with pkgs; [
-          fcitx5-mozc
-          fcitx5-gtk
-          fcitx5-table-other
-          fcitx5-configtool
-        ];
-      };
-    };
   };
 
   services = {
@@ -213,10 +202,9 @@
     xdg-desktop-portal-hyprland
     dunst
     wl-clipboard
-    slurp
     grim
+    slurp
     wofi
-    tofi
     brightnessctl
     waybar
     swww
@@ -225,6 +213,7 @@
     dconf
     gnome.dconf-editor
     libsForQt5.spectacle
+    xdg-utils
     
     # Terminal
     foot
@@ -250,12 +239,14 @@
     spotify
     spotifywm
     spotify-tray
+    amberol
 
     # Media
     mpv
     ani-cli
     vlc
     imv
+    obs-studio
 
     # VMs
     spice
