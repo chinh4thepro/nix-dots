@@ -225,6 +225,8 @@
     neofetch
     fzf
     android-tools
+    exfat
+    ntfs3g
     
     # Internet
     networkmanagerapplet
@@ -234,6 +236,7 @@
     thunderbird
     curl
     wget
+    qutebrowser
 
     # Music
     spotify
@@ -289,6 +292,10 @@
     duf
     wgetpaste
     btop
+
+    # Bootloader
+    refind
+    efibootmgr
 
   ];
 

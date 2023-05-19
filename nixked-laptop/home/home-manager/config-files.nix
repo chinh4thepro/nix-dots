@@ -428,10 +428,10 @@
         #window,
         #workspaces button
         {
-          color: #ffffff;
+          color: #c6d0f5;
           border-radius: 5px;
           padding: 2px 9px;
-          background-color: #414559;
+          background-color: #303446;
           font-size: 14px;
 
           margin-left: 5px;
@@ -443,10 +443,10 @@
 
         #workspaces
         {
-          color: #ffffff;
+          color: #c6d0f5;
           border-radius: 5px;
           padding: 2px 3.5px;
-          background-color: #414559;
+          background-color: #303446;
 
           margin-left: 5px;
           margin-right: 5px;
@@ -559,7 +559,6 @@
         exec-once = eval $(ssh-agent)
         exec-once = nm-applet --indicator
         exec-once = waybar & swww init && swww img /home/$USER/Pictures/wallpapers/afar.jpg
-        exec-once = fcitx5
 
         env = XCURSOR_SIZE,24
         env = NIXOS_OZONE_WL,1
@@ -610,6 +609,8 @@
           border_size = 2
 
           layout = dwindle
+          col.active_border = rgb(8aadf4)
+          col.inactive_border = rgb(24273a)
         }
 
         decoration {
@@ -624,7 +625,6 @@
           drop_shadow = yes
           shadow_range = 20
           shadow_render_power = 3
-          col.shadow = 85c1dc
         }
 
         animations {
