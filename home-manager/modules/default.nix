@@ -11,46 +11,45 @@
     };
   };
 
-  home.packages = with pkgs; [
-    # CLI Tools
-    eza
-    zoxide
-    btop
-    fd
-    fzf
-    ripgrep
-    killall
-    fastfetch
-    tree
-    hyperfine
+  home.packages = with pkgs;
+    [
+      # CLI Tools
+      eza
+      zoxide
+      btop
+      fd
+      fzf
+      ripgrep
+      killall
+      fastfetch
+      tree
+      hyperfine
 
-    # Files
-    p7zip
+      # Files
+      p7zip
     
-    # Internet
-    yt-dlp
-    gping
-    wget
-    curl
-    rsync
+      # Internet
+      yt-dlp
+      gping
+      wget
+      curl
+      rsync
 
-    # Media
-    ani-cli
-    mpv
+      # Media
+      ani-cli
+      mpv
 
-    # Terminal Multiplexer
-    zellij
+      # Terminal Multiplexer
+      zellij
 
-    # Nix Tools
-    alejandra
+      # Nix Tools
+      alejandra
     ]
     ++ lib.optionals stdenv.isDarwin [
       coreutils
       wifi-password
       time
-    ]
-
-  ];
+    ];
 
   programs = {
     git.enable = true;
