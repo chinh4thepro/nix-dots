@@ -43,7 +43,7 @@
 
     # Nix Tools
     alejandra
-    
+    ]
     ++ lib.optionals stdenv.isDarwin [
       coreutils
       wifi-password
