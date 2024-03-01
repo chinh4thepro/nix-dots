@@ -23,7 +23,7 @@ in {
     useGlobalPkgs = true;
     useUserPackages = true;
     users.chinh4thepro = import ../../home-manager/machines/A1708-MACOS.nix;
-  }
+  };
 
   users.users.chinh4thepro = {
     name = "chinh4thepro";
