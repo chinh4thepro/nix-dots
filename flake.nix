@@ -8,14 +8,21 @@
     # Home manager
     home-manager = {
       url = "github:nix-community/home-manager";
-      nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     # Hardware quirks
     nixos-hardware = {
       url = "github:nixos/nixos-hardware";
-      nixpkgs.follows = "nixpkgs";
+      # inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # Darwin/MacOS
+    darwin = {
+      url = "github:lnl7/nix-darwin";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
 
     # Stylix
     stylix = {
@@ -27,8 +34,8 @@
   outputs = {
     self,
     nixpkgs,
-    hardware,
     home-manager,
+    nixos-hardware,
     stylix,
     ...
   } @ inputs: let
@@ -71,13 +78,29 @@
     nixosConfigurations = {
       # Macbook Pro A1708
       A1708 = mkNixos [
-        ./hosts/A1708
-	{home-manager.users.chinh4thepro = ./home-manager/machines/A1708.nix;}
-	{nixos-hardware.nixosModules.apple-macbook-pro-14-1;}
+        nixos-hardware.nixosModules.apple-macbook-pro-14-1
+	./hosts/A1708
+	{
+	  home-manager.users.chinh4thepro = ./home-manager/machines/A1708.nix;
+	}
+      ];
+    };
+    
+    darwinConfigurations = {
+      A1708-MACOS = mkDarwin "x86_64-darwin" [
+        {
+          home-manager.users.chinh4thepro = ./home-manager/machines/A1708-MACOS.nix;
+	  home-manager.useGlobalPkgs = true;
+	  home-manager.useUserPackages = true;
+          home-manager.extraSpecialArgs = {inherit inputs outputs;};
+        }
+        home-manager.darwinModules.home-manager
+	./hosts/A1708-MACOS
       ];
     };
 
     homeConfigurations = {
+      "chinh4thepro@A1708-MACOS" = mkHome [./home-manager/machines/A1708-MACOS.nix] nixpkgs.legacyPackages.x86_64-darwin;
     };
   };
 }
