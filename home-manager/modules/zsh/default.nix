@@ -1,5 +1,6 @@
 {config, ...}: {
   imports = [
+    ./zshrc.nix
     ./aliases.nix
     ./zprofile.nix
   ];
