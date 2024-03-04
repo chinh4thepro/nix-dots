@@ -5,9 +5,19 @@
   pkgs,
   ...
 }: {
+  imports = [
+    ./git.nix
+  ];
+
   nixpkgs = {
     config = {
       allowUnfree = true;
+    };
+  };
+
+  programs = {
+    bat = {
+      enable = true;
     };
   };
 
