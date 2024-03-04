@@ -15,6 +15,7 @@
   imports = [
     ../modules/default.nix
     ../modules/mac.nix
+    ../modules/git.nix
   ];
 
 }

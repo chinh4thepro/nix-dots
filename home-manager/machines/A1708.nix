@@ -2,7 +2,8 @@
 
 {
   imports = [
-    ../modules/default.nix 
+    ../modules/default.nix
+    ../modules/git.nix
   ];
 
   home = {
