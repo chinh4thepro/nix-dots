@@ -7,17 +7,12 @@
 }: {
   imports = [
     ./git.nix
+    ./media.nix
   ];
 
   nixpkgs = {
     config = {
       allowUnfree = true;
-    };
-  };
-
-  programs = {
-    bat = {
-      enable = true;
     };
   };
 
@@ -45,10 +40,6 @@
       curl
       rsync
 
-      # Media
-      ani-cli
-      mpv
-
       # Terminal Multiplexer
       zellij
 
@@ -63,5 +54,6 @@
 
   programs = {
     git.enable = true;
+    bat.enable = true;
   };
 }
