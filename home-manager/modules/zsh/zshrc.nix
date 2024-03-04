@@ -341,8 +341,7 @@ in {
 
       # ZSH Tmux plugin settings
       TMUX_MOTD=false
-      if [[ $(hostname) == "amy" ]] || [[ $(hostname) == "cubert" ]] || [[ $(hostname) == "planex" ]] ; then
-          # Disable autostart on local machines
+      if [[ $(hostname) == "A1708-MACOS" ]] || [[ $(hostname) == "A1708" ]] ; then
           TMUX_AUTOSTART=false
       fi
     '';
