@@ -8,6 +8,7 @@
   imports = [
     ./git.nix
     ./media.nix
+    ./zsh
   ];
 
   nixpkgs = {
@@ -42,6 +43,7 @@
 
       # Terminal Multiplexer
       zellij
+      tmux
 
       # Nix Tools
       alejandra
@@ -50,6 +52,9 @@
       coreutils
       wifi-password
       time
+    ]
+    ++ lib.optionals stdenv.isLinux [
+      protonvpn-gui
     ];
 
   programs = {
