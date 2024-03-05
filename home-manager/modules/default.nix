@@ -31,9 +31,6 @@
       tree
       hyperfine
 
-      # ZSH
-      antigen
-
       # Files
       p7zip
     
