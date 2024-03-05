@@ -24,6 +24,14 @@
       size = 20000;
       share = true;
     };
+
+    oh-my-zsh = {
+      enable = true;
+      plugins = [
+        "git"
+      ];
+      theme = "gentoo";
+    };
   };
 }
 
