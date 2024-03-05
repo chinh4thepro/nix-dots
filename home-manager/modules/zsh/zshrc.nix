@@ -61,8 +61,6 @@ in {
       if [ "$USER" = 'root' ] && [ "$(cut -d ' ' -f 19 /proc/$$/stat)" -gt 0 ]; then
         renice -n 0 -p "$$" && echo "# Adjusted nice level for current shell to 0."
       fi
-      }
-
     '';
 
     envExtra = ''
