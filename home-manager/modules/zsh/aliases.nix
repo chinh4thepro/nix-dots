@@ -22,7 +22,7 @@ in {
       gpl = "git pull";
       gpu = "git push";
       gcl = "git clone";
-      gc = "git commiit";
+      gc = "git commit";
       gaa = "git add -A";
       szsh = "source ~/.zshrc";
       benchmark = "${pkgs.hyperfine}/bin/hyperfine --warmup 3 ";
@@ -38,4 +38,3 @@ in {
       ding = "osascript -e 'display notification \"command done\"'";
     };
 }
-

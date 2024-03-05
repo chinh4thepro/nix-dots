@@ -85,7 +85,7 @@
 	}
       ];
     };
-    
+
     darwinConfigurations = {
       A1708-MACOS = mkDarwin "x86_64-darwin" [
         {
