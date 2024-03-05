@@ -1,7 +1,7 @@
 {...}: {
   programs.neovim = {
     enable = true;
-    vimAlias = false;
+    vimAlias = true;
     plugins = with pkgs; [
       vimPlugins.vim-nix
     ];
