@@ -18,13 +18,10 @@ in {
       df = "df -h";
       dd = "dd status=progress bs=4M conv=fdatasync ";
       sudo = "sudo env \"PATH=$PATH\" ";
-      sd = "cd $(find . -type d -print | ${pkgs.fzf}/bin/fzf)";
-      grg = "git remote set-url origin ssh://git@github.com:/$(whoami)/$(basename $(pwd))";
-      gp = "git pull";
+      git-remote = "git remote set-url origin ssh://git@github.com:/$(whoami)/$(basename $(pwd))";
+      gpl = "git pull";
       gpu = "git push";
-      gpf = "git push --force";
       szsh = "source ~/.zshrc";
-      mine = "sudo chown -R $(whoami):users";
       benchmark = "${pkgs.hyperfine}/bin/hyperfine --warmup 3 ";
     }
     // optionalAttrs isLinux {

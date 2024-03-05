@@ -31,6 +31,9 @@
       tree
       hyperfine
 
+      # ZSH
+      antigen
+
       # Files
       p7zip
     
@@ -52,6 +55,7 @@
       coreutils
       wifi-password
       time
+      raycast
     ]
     ++ lib.optionals stdenv.isLinux [
       protonvpn-gui
