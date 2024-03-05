@@ -9,7 +9,7 @@
 in {
   programs.zsh.shellAliases =
     {
-      vim = "neovim"
+      vim = "neovim";
       diff = "${pkgs.colordiff}/bin/colordiff";
       grep = "${pkgs.ripgrep}/bin/rg";
       cat = "${pkgs.bat}/bin/bat -p";
