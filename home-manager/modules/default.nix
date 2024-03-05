@@ -31,6 +31,9 @@
       tree
       hyperfine
 
+      # Shell
+      any-nix-shell
+
       # Files
       p7zip
     

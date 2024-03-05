@@ -21,6 +21,8 @@ in {
       git-remote = "git remote set-url origin ssh://git@github.com:/$(whoami)/$(basename $(pwd))";
       gpl = "git pull";
       gpu = "git push";
+      gcl = "git clone";
+      gc = "git commiit";
       szsh = "source ~/.zshrc";
       benchmark = "${pkgs.hyperfine}/bin/hyperfine --warmup 3 ";
     }
