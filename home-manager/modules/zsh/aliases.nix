@@ -23,7 +23,7 @@ in {
       gpu = "git push";
       gcl = "git clone";
       gc = "git commiit";
-      gaa = "git add -a";
+      gaa = "git add -A";
       szsh = "source ~/.zshrc";
       benchmark = "${pkgs.hyperfine}/bin/hyperfine --warmup 3 ";
     }
