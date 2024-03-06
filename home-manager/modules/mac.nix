@@ -1,5 +1,4 @@
 {pkgs, ...}: {
-
   imports = [
   ];
 
@@ -8,6 +7,4 @@
     unrar
     pywal
   ];
-
 }
-
