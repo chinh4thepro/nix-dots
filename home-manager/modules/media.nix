@@ -7,6 +7,7 @@
   ]
   ++ lib.optionals stdenv.isDarwin [
     iina
+    xquartz
   ]
   ++ lib.optionals stdenv.isLinux [
   ];
