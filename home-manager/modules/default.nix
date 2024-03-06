@@ -56,9 +56,11 @@
       wifi-password
       time
       raycast
+      inputs.jerry.packages."x86_64-darwin".jerry
     ]
     ++ lib.optionals stdenv.isLinux [
       protonvpn-gui
+      inputs.jerry.packages."x86_64-linux".jerry
     ];
 
   programs = {
