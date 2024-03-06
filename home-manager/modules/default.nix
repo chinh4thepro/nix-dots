@@ -36,7 +36,7 @@
 
       # Files
       p7zip
-    
+
       # Internet
       yt-dlp
       gping

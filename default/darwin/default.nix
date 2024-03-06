@@ -36,6 +36,17 @@ in {
   services.nix-daemon.enable = true;
 
   nix = {
+    settings = {
+      auto-optimise-store = true;
+      builders-use-substitutes = true;
+    };
+    gc = {
+      automatic = true;
+      interval = {
+        Weekday = 0; Hour = 0; Minute = 0;
+      };
+      options = "--delete-older-than 6d";
+    };
     extraOptions =
       ''
         # Determinate systems options
