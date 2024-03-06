@@ -8,6 +8,6 @@
     noto-fonts-cjk-sans
     noto-fonts-cjk-serif
     noto-fonts-emoji
-    (nerdfonts.override { fonts = [ "FantasqueSans" ]; })
+    (nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
   ];
 }
