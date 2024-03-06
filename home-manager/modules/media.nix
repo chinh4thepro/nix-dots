@@ -2,6 +2,7 @@
   home.packages = with pkgs;
   [
     nsxiv
+    feh
     mpv
     ani-cli
   ]
