@@ -1,12 +1,15 @@
 {pkgs, ...}: {
-  home.packages = with pkgs; 
+  home.packages = with pkgs;
   [
-    ani-cli
+    nsxiv
+    mpv
   ]
   ++ lib.optionals stdenv.isDarwin [
     iina
+    inputs.jerry.packages."x86_64-darwin".jerry
+    gnused
   ]
   ++ lib.optionals stdenv.isLinux [
-    mpv
+    inputs.jerry.packages."x86_64-linux".jerry
   ];
 }
