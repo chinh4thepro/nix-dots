@@ -57,6 +57,7 @@
       time
       raycast
       inputs.jerry.packages."x86_64-darwin".jerry
+      gnused
     ]
     ++ lib.optionals stdenv.isLinux [
       protonvpn-gui
