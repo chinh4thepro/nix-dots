@@ -63,6 +63,7 @@
       wifi-password
       time
       raycast
+      neofetch
       inputs.jerry.packages."x86_64-darwin".jerry
     ]
     ++ lib.optionals stdenv.isLinux [
