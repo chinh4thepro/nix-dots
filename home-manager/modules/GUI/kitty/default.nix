@@ -9,6 +9,7 @@
       scrollback_lines = 0;
       enable_audio_bell = false;
       background_opacity = 0.75;
+      background_blur = 1;
     };
     shellIntegration = {
       enableZshIntegration = true;
