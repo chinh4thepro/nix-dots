@@ -3,6 +3,8 @@
   [
     mpv
     ani-cli
+    spotify
+    spicetify-cli
   ]
   ++ lib.optionals stdenv.isDarwin [
     iina

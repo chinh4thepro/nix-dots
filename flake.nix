@@ -29,6 +29,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # Spicetify
+    spicetify-nix = {
+      url = "github:the-argus/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # Stylix
     stylix = {
       url = "github:danth/stylix";
@@ -41,6 +47,7 @@
     nixpkgs,
     home-manager,
     nixos-hardware,
+    spicetify-nix,
     stylix,
     ...
   } @ inputs: let
