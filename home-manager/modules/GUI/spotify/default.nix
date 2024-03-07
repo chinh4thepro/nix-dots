@@ -5,6 +5,18 @@
       lastfm
       genre
       hidepodcasts
+      volumePercentage
+      adblock
+      history
+      songStats
+      fixEnhance
+      playlistIntersection
+      shuffle
+      powerBar
+      fullAlbumDate
+      fullAppDisplayMod
+      goToSong
+      showQueueDuration
     ];
   };
 }
