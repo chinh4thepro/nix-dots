@@ -31,6 +31,7 @@
       fastfetch
       tree
       hyperfine
+      ffmpeg-full
 
       # Shell
       any-nix-shell
