@@ -33,6 +33,11 @@
       hyperfine
       ffmpeg-full
 
+      # Codding
+      rustup
+      neovim
+      ## Wher zed :(
+
       # Shell
       any-nix-shell
 
