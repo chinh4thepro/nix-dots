@@ -32,7 +32,7 @@
     # Spicetify
     spicetify-nix = {
       url = "github:the-argus/spicetify-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
+      # inputs.nixpkgs.follows = "nixpkgs";
     };
 
     # Stylix
@@ -91,23 +91,24 @@
       # Macbook Pro A1708
       A1708 = mkNixos [
         nixos-hardware.nixosModules.apple-macbook-pro-14-1
-	./hosts/A1708
-	{
-	  home-manager.users.chinh4thepro = ./home-manager/machines/A1708.nix;
-	}
+	    ./hosts/A1708
+	    {
+	      home-manager.users.chinh4thepro = ./home-manager/machines/A1708.nix;
+	    }
       ];
     };
 
     darwinConfigurations = {
+      # Macbook Pro A1708 (but macos)
       A1708-MACOS = mkDarwin "x86_64-darwin" [
         {
           home-manager.users.chinh4thepro = ./home-manager/machines/A1708-MACOS.nix;
-	  home-manager.useGlobalPkgs = true;
-	  home-manager.useUserPackages = true;
+	      home-manager.useGlobalPkgs = true;
+	      home-manager.useUserPackages = true;
           home-manager.extraSpecialArgs = {inherit inputs outputs;};
         }
         home-manager.darwinModules.home-manager
-	./hosts/A1708-MACOS
+	    ./hosts/A1708-MACOS
       ];
     };
 
