@@ -31,7 +31,7 @@
 
     # Spicetify
     spicetify-nix = {
-      url = "github:the-argus/spicetify-nix";
+      url = "github:Believer1/spicetify-nix";
       # inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -69,7 +69,7 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.extraSpecialArgs = {inherit inputs outputs;};
+              home-manager.extraSpecialArgs = {inherit inputs outputs spicetify-nix;};
             }
           ];
         specialArgs = {inherit inputs outputs;};
@@ -105,7 +105,7 @@
           home-manager.users.chinh4thepro = ./home-manager/machines/A1708-MACOS.nix;
 	      home-manager.useGlobalPkgs = true;
 	      home-manager.useUserPackages = true;
-          home-manager.extraSpecialArgs = {inherit inputs outputs;};
+          home-manager.extraSpecialArgs = {inherit inputs outputs spicetify-nix;};
         }
         home-manager.darwinModules.home-manager
 	    ./hosts/A1708-MACOS

@@ -378,15 +378,15 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1704167711,
-        "narHash": "sha256-kFDq+kf/Di/P8bq5sUP8pVwRkrSVrABksBjMPmLic3s=",
-        "owner": "the-argus",
+        "lastModified": 1706551902,
+        "narHash": "sha256-rLrePD1QXhDBUTNyZWcJST4RonucQt/orYa/v3ZLHuo=",
+        "owner": "Believer1",
         "repo": "spicetify-nix",
-        "rev": "1325416f951d6a82cfddb1289864ad782e2b87c4",
+        "rev": "917e1a32b21443789124beb70c87afbc1ddb0510",
         "type": "github"
       },
       "original": {
-        "owner": "the-argus",
+        "owner": "Believer1",
         "repo": "spicetify-nix",
         "type": "github"
       }

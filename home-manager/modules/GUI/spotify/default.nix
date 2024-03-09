@@ -1,6 +1,6 @@
-{pkgs, spicetify-nix, ...}:
+{pkgs, lib, spicetify-nix, ...}:
 let
-  spicePkgs = spicetify-nix.pkgSets.${pkgs.system};
+  spicePkgs = spicetify-nix.packages.${pkgs.system}.default;
 in {
   programs.spicetify = {
     enable = true;
@@ -9,13 +9,10 @@ in {
     ];
     enabledExtensions = with spicePkgs.extensions; [
       lastfm
-      genre
-      hidepodcasts
       volumePercentage
       adblock
       history
       songStats
-      fixEnhance
       playlistIntersection
       shuffle
       powerBar
@@ -25,7 +22,5 @@ in {
       showQueueDuration
     ];
   };
-  imports = [
-    spicetify-nix.homeManagerModule
-  ];
+  imports = [ spicetify-nix.homeManagerModule ];
 }
