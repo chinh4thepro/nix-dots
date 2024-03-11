@@ -32,6 +32,7 @@
       tree
       hyperfine
       ffmpeg-full
+      unrar
 
       # Codding
       rustup
@@ -42,6 +43,9 @@
 
       # Shell
       any-nix-shell
+
+      # Extra theming
+      pywal
 
       # Files
       p7zip

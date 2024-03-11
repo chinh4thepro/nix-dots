@@ -14,7 +14,7 @@
 
   imports = [
     ../modules/default.nix
-    ../modules/mac.nix
+    ../modules/extra.nix
     ../modules/GUI
   ];
 
