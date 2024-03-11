@@ -14,7 +14,6 @@
 
   imports = [
     ../modules/default.nix
-    ../modules/extra.nix
     ../modules/GUI
   ];
 
