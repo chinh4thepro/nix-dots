@@ -36,6 +36,11 @@
       # Codding
       rustup
       neovim
+      tree-sitter
+      tree-sitter-c-grammar
+      tree-sitter-css-grammar
+      tree-sitter-rust-grammar
+      tree-sitter-html-grammar
       ## Wher zed :(
 
       # Shell
