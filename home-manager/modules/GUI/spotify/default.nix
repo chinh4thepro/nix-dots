@@ -22,5 +22,7 @@ in {
       showQueueDuration
     ];
   };
-  imports = [ spicetify-nix.homeManagerModule ];
+  imports = [
+    spicetify-nix.homeManagerModule
+  ];
 }
