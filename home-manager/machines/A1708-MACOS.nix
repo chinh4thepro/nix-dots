@@ -15,6 +15,7 @@
   imports = [
     ../modules/default.nix
     ../modules/GUI
+    ../modules/office.nix
   ];
 
 }
