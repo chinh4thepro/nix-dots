@@ -10,8 +10,8 @@
     alejandra
     just
     neovim
+    emacs
     wget
     home-manager
   ];
 }
-
