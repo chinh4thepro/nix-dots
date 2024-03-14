@@ -35,8 +35,6 @@
       unrar
 
       # Codding
-      clang
-      clangStdenv
       rustup
       neovim
       tree-sitter
