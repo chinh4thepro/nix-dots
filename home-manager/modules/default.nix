@@ -17,7 +17,7 @@
     };
   };
 
-  home.packages = with pkgs;
+  home.packages = with pkgs.unstable;
     [
       # CLI Tools
       eza
