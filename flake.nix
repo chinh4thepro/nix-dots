@@ -96,7 +96,7 @@
         nixos-hardware.nixosModules.apple-macbook-pro-14-1
 	    ./hosts/A1708
 	    {
-	      home-manager.users.chinh4thepro = ./home-manager/machines/A1708.nix;
+	      home-manager.users.chinh4thepro = overlays ./home-manager/machines/A1708.nix;
 	    }
       ];
     };
