@@ -3,7 +3,6 @@
   lib,
   config,
   pkgs,
-  overlays,
   ...
 }: {
   imports = [
@@ -39,7 +38,7 @@
       neovim
       tree-sitter
       tree-sitter-grammars.tree-sitter-cpp
-      unstable.zed-editor
+      zed-editor
 
       # Shell
       any-nix-shell
