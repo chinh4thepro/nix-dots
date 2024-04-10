@@ -3,6 +3,7 @@
   lib,
   config,
   pkgs,
+  overlays,
   ...
 }: {
   imports = [
@@ -17,7 +18,7 @@
     };
   };
 
-  home.packages = with pkgs.unstable;
+  home.packages = with pkgs;
     [
       # CLI Tools
       eza
@@ -38,7 +39,7 @@
       neovim
       tree-sitter
       tree-sitter-grammars.tree-sitter-cpp
-      zed-editor
+      unstable.zed-editor
 
       # Shell
       any-nix-shell
