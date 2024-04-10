@@ -4,5 +4,5 @@
     ../../default/nixos
   ];
 
-  system.stateVersion = 4;
+  system.stateVersion = "24.05";
 }
