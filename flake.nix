@@ -85,7 +85,7 @@
     mkHome = modules: pkgs:
       home-manager.lib.homeManagerConfiguration {
         inherit modules pkgs;
-        extraSpecialArgs = {inherit inputs outputs;};
+        extraSpecialArgs = {inherit inputs outputs unstable;};
       };
   in rec {
     overlays = import ./overlay {inherit inputs;};
@@ -96,7 +96,7 @@
         nixos-hardware.nixosModules.apple-macbook-pro-14-1
 	    ./hosts/A1708
 	    {
-	      home-manager.users.chinh4thepro = overlays ./home-manager/machines/A1708.nix;
+	      home-manager.users.chinh4thepro = ./home-manager/machines/A1708.nix;
 	    }
       ];
     };
