@@ -54,6 +54,8 @@
       wget
       curl
       rsync
+      firefox
+      vesktop
 
       # Terminal Multiplexer
       zellij
