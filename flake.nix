@@ -85,11 +85,9 @@
     mkHome = modules: pkgs:
       home-manager.lib.homeManagerConfiguration {
         inherit modules pkgs;
-        extraSpecialArgs = {inherit inputs outputs unstable;};
+        extraSpecialArgs = {inherit inputs outputs;};
       };
   in rec {
-    overlays = import ./overlay {inherit inputs;};
-
     nixosConfigurations = {
       # Macbook Pro A1708
       A1708 = mkNixos [
