@@ -33,12 +33,12 @@
       ffmpeg-full
       unrar
 
-      # Codding
+      # Coding
       rustup
       neovim
       tree-sitter
       tree-sitter-grammars.tree-sitter-cpp
-      ## Wher zed :(
+      zed-editorr
 
       # Shell
       any-nix-shell
