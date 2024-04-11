@@ -38,6 +38,7 @@
       neovim
       tree-sitter
       tree-sitter-grammars.tree-sitter-cpp
+      zed-editor
 
       # Shell
       any-nix-shell
