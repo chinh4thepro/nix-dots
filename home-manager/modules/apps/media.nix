@@ -5,6 +5,7 @@
     ani-cli
     spotify
     spicetify-cli
+    obs-studio
   ]
   ++ lib.optionals stdenv.isDarwin [
     iina
