@@ -54,6 +54,7 @@
     home-manager,
     nixos-hardware,
     spicetify-nix,
+    niri,
     stylix,
     ...
   } @ inputs: let
