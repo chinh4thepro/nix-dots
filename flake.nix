@@ -39,6 +39,7 @@
     # Niri
     niri = {
       url = "https://github.com/sodiboo/niri-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     # Stylix
