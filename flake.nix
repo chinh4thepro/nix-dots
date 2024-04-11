@@ -36,6 +36,11 @@
       # inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # Niri
+    niri = {
+      url = "https://github.com/sodiboo/niri-flake";
+    };
+
     # Stylix
     stylix = {
       url = "github:danth/stylix";
@@ -66,6 +71,7 @@
           modules
           ++ [
             home-manager.nixosModules.home-manager
+            niri.nixosModules.niri
             # stylix.nixosModules.stylix
             {
               home-manager.useGlobalPkgs = true;
