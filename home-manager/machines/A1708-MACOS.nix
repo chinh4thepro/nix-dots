@@ -14,7 +14,7 @@
 
   imports = [
     ../modules/default.nix
-    ../modules/GUI
+    ../modules/apps
     ../modules/office.nix
   ];
 
