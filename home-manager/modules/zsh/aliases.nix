@@ -30,7 +30,7 @@ in {
       benchmark = "${pkgs.hyperfine}/bin/hyperfine --warmup 3 ";
     }
     // optionalAttrs isLinux {
-      rebuild = "nixos-rebuild switch --flake .";
+      rebuild = "sudo nixos-rebuild switch --flake .";
       scrot = "${pkgs.grim}/bin/grim \"desktop-$(date +\"%Y%m%d%H%M\").png\"";
       xclip = "tee >(${pkgs.wl-clipboard}/bin/wl-copy) | ${pkgs.wl-clipboard}/bin/wl-copy -p";
     }
