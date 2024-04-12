@@ -23,7 +23,7 @@
           # Basic binds
           "Mod+Shift+E".action = quit;
           "Mod+Shift+Q".action = close-window;
-          "Mod+F".action = fullscreen;
+          "Mod+F".action = fullscreen-window;
 
           # Launch program
           "Mod+Return".action = spawn "kitty";
