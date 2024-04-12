@@ -17,9 +17,9 @@
 
         # Keybinds
         binds = with config.lib.niri.actions; {
-          "Mod+Shift+Slash".action = show-hotkey-overlay;
-          "Mod+Shift+E".action = quit;
-          "Mos+Shift+Q".action = close-window;
+          "Mod+Shift+Slash".action = "show-hotkey-overlay";
+          "Mod+Shift+E".action = "quit";
+          "Mos+Shift+Q".action = "close-window";
           "Mod+Return".action = spawn "kitty";
           "Mod+D".action = spawn "wofi" "--show" "drun";
         };
