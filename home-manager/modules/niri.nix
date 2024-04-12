@@ -18,7 +18,7 @@
         };
 
         # Display
-        outputs."eDP-1".scale = 2.0;
+        outputs."eDP-1".scale = 1.25;
 
         # Keybinds
         binds = with config.lib.niri.actions; {
