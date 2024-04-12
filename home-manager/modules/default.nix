@@ -64,8 +64,6 @@
 
       # Nix Tools
       alejandra
-
-      niri
     ]
     ++ lib.optionals stdenv.isDarwin [
       coreutils
