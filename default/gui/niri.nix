@@ -13,7 +13,7 @@
   programs = {
     niri = {
       enable = true;
-      packages = inputs.niri.packages.${pkgs.system}.niri;
+      packages = inputs.niri.packages.${pkgs.system}.niri-stable;
     }
   };
 }
