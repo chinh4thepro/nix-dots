@@ -6,10 +6,12 @@
 }: {
   programs = {
     niri = {
-      environment = {
-        "NIXOS_OZONE_WL" = 1;
-      };
       settings = {
+        # Environment
+        environment = {
+          NIXOS_OZONE_WL = 1;
+        };
+
         # Display
         outputs."eDP-1".scale=1.50;
 
