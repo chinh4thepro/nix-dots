@@ -2,6 +2,7 @@
   imports = [
     ./hardware-configuration.nix
     ../../default/nixos
+    ../../default/gui
     ../../default/debug
   ];
 
