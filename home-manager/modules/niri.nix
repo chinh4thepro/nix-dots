@@ -17,8 +17,8 @@
 
         # Keybinds
         binds = {
-          "Mod+Shift+Slash".action.show-hotkey-overlay = true;
-          "Mod+Shift+E".action.quit = true;
+          "Mod+Shift+Slash".action.show-hotkey-overlay;
+          "Mod+Shift+E".action.quit;
           "Mod+Return".action.spawn = ["Kitty"];
           "Mod+D".action.spawn = ["wofi" "--show" "drun"];
         };
