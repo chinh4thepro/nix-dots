@@ -18,6 +18,7 @@
         # Keybinds
         binds = {
           "Mod+Return".action.spawn = ["Kitty"];
+          "Mod+D".action.spawn = ["wofi" "--show" "drun"];
         };
       };
     };
