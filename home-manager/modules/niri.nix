@@ -7,8 +7,10 @@
   programs = {
     niri = {
       settings = {
-        # Gaps
-        gaps = "10";
+        # Layout
+        layout = {
+          gaps = "10";
+        };
 
         # Environment
         environment = {
