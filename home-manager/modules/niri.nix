@@ -9,7 +9,7 @@
       settings = {
         # Layout
         layout = {
-          gaps = "10";
+          gaps = 10;
         };
 
         # Environment
