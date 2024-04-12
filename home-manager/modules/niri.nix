@@ -7,6 +7,6 @@
         niri = {
             enable = true;
             package = niri-stable;
-        }
-    }
+        };
+    };
 }
