@@ -8,7 +8,7 @@
     niri = {
       settings = {
         # Gaps
-        gaps = 10;
+        gaps = "10";
 
         # Environment
         environment = {
