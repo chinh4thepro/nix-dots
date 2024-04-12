@@ -7,6 +7,9 @@
   programs = {
     niri = {
       settings = {
+        # Gap
+        gap = "10";
+
         # Environment
         environment = {
           NIXOS_OZONE_WL = "1";
