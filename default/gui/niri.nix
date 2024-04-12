@@ -32,6 +32,8 @@
     };
   };
 
+  nixpkgs.overlays = [ inputs.niri.overlays.niri ];
+
   programs = {
     niri = {
       enable = true;
@@ -56,6 +58,5 @@
     libva-utils
     gsettings-desktop-schemas
     udiskie
-    niri
   ];
 }
