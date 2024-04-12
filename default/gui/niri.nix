@@ -56,6 +56,6 @@
     libva-utils
     gsettings-desktop-schemas
     udiskie
-    niri-stable
+    niri
   ];
 }
