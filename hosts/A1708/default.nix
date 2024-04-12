@@ -1,8 +1,8 @@
 { pkgs, ...}: {
   imports = [
     ./hardware-configuration.nix
+    ../../default/gui/niri.nix
     ../../default/nixos
-    ../../default/gui
     ../../default/debug
   ];
 
