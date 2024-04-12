@@ -6,7 +6,7 @@
 }: {
   programs = {
     niri = {
-      enable = :true";
+      enable = "true";
       settings = {
         # Environment
         environment = {
