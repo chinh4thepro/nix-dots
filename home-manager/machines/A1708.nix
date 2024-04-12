@@ -2,8 +2,9 @@
 
 {
   imports = [
-    ../modules/default.nix
     ../modules/apps
+    ../modules/default.nix
+    ../modules/niri.nix
   ];
 
   home = {
