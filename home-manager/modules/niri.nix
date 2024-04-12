@@ -16,11 +16,11 @@
         outputs."eDP-1".scale=1.50;
 
         # Keybinds
-        binds = {
-          "Mod+Shift+Slash".action.show-hotkey-overlay = 1;
-          "Mod+Shift+E".action.quit = 1;
-          "Mod+Return".action.spawn = ["Kitty"];
-          "Mod+D".action.spawn = ["wofi" "--show" "drun"];
+        binds = with config.lib.niri.actions; {
+          "Mod+Shift+Slash".action = show-hotkey-overlay;
+          "Mod+Shift+E".action = quit;
+          "Mod+Return".action = spawn "Kitty";
+          "Mod+D".action = spawn "wofi --show drun";
         };
       };
     };
