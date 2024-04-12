@@ -37,7 +37,7 @@
   programs = {
     niri = {
       enable = true;
-      packages = pkgs.niri-stable;
+      packages = pkgs.niri-unstable;
     };
     waybar = {
       enable = true;
