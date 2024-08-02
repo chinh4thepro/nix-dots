@@ -1,15 +1,12 @@
 {...}: {
   programs.kitty = {
     enable = true;
-    font = {
-      name = "fantasque sans m nerd font";
-      size = 12;
-    };
     settings = {
       scrollback_lines = 0;
       enable_audio_bell = false;
-      background_opacity = "0.75";
       background_blur = 1;
+      window_padding_width = 10;
+      close_child_on_death = "yes";
     };
     shellIntegration = {
       enableZshIntegration = true;

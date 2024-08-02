@@ -32,8 +32,8 @@
 
     # Spicetify
     spicetify-nix = {
-      url = "github:Believer1/spicetify-nix";
-      # inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     # Niri
@@ -47,6 +47,24 @@
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # Hyprland
+    hyprland = {
+      url = "github:hyprwm/Hyprland";
+      # inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # An anime game launcher
+    aagl = {
+      url = "github:ezKEa/aagl-gtk-on-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # Aylurs gtk shell
+    ags = {
+      url = "github:Aylur/ags";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -57,6 +75,7 @@
     spicetify-nix,
     niri,
     stylix,
+    aagl,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -74,7 +93,8 @@
           ++ [
             home-manager.nixosModules.home-manager
             niri.nixosModules.niri
-            # stylix.nixosModules.stylix
+            aagl.nixosModules.default
+            stylix.nixosModules.stylix
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
@@ -104,6 +124,13 @@
 	    {
 	      home-manager.users.chinh4thepro = ./home-manager/machines/A1708.nix;
 	    }
+      ];
+      # Lenovo Ideapad 15alc6
+      lappy = mkNixos [
+        ./hosts/lappy
+	{
+          home-manager.users.chinh4thepro = ./home-manager/machines/lappy.nix;
+	}
       ];
     };
 

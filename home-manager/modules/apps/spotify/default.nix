@@ -1,11 +1,15 @@
-{pkgs, lib, spicetify-nix, ...}:
+{pkgs, lib, inputs, spicetify-nix, ...}:
 let
-  spicePkgs = spicetify-nix.packages.${pkgs.system}.default;
+  spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
 in {
   programs.spicetify = {
     enable = true;
+    theme = spicePkgs.themes.text;
     enabledCustomApps = with spicePkgs.apps; [
       marketplace
+      newReleases
+      lyricsPlus
+      betterLibrary
     ];
     enabledExtensions = with spicePkgs.extensions; [
       lastfm
@@ -21,8 +25,11 @@ in {
       goToSong
       showQueueDuration
     ];
+    enabledSnippets = with spicePkgs.snippets; [
+      remove-top-spacing
+    ];
   };
   imports = [
-    spicetify-nix.homeManagerModule
+    spicetify-nix.homeManagerModules.default
   ];
 }

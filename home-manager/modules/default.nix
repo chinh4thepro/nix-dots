@@ -29,22 +29,22 @@
       killall
       fastfetch
       tree
-      hyperfine
       ffmpeg-full
       unrar
 
       # Coding
       rustup
-      neovim
       tree-sitter
       tree-sitter-grammars.tree-sitter-cpp
       gcc
+      vscodium
+      zed-editor
 
       # Shell
       any-nix-shell
 
       # Extra theming
-      pywal
+      pywal16
 
       # Files
       p7zip
@@ -72,11 +72,9 @@
       raycast
       neofetch
       stats
-      inputs.jerry.packages."x86_64-darwin".jerry
     ]
     ++ lib.optionals stdenv.isLinux [
       protonvpn-gui
-      inputs.jerry.packages."x86_64-linux".jerry
     ];
 
   programs = {

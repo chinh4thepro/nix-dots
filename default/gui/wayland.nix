@@ -6,6 +6,8 @@
     wlr-randr
     wl-clipboard
     polkit_gnome
+    nautilus
+    brightnessctl
   ];
 
   systemd = {
@@ -24,12 +26,16 @@
     };
   };
 
+  services.displayManager.sddm = {
+    enable = true;
+    wayland.enable = true;
+  };
+
   environment.sessionVariables = {
     POLKIT_AUTH_AGENT = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
     GSETTINGS_SCHEMA_DIR = "${pkgs.gsettings-desktop-schemas}/share/gsettings-schemas/${pkgs.gsettings-desktop-schemas.name}/glib-2.0/schemas";
     NIXOS_OZONE_WL = "1";
     CLUTTER_BACKEND = "wayland";
-    WLR_RENDERER = "vulkan";
     GTK_USE_PORTAL = "1";
     GDK_BACKEND = "wayland";
     QT_QPA_PLATFORM = "wayland;xcb";

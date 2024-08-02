@@ -14,7 +14,6 @@
 
         # Environment
         environment = {
-          NIXOS_OZONE_WL = "1";
         };
 
         # Display
