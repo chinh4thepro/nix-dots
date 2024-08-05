@@ -36,12 +36,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # Niri
-    niri = {
-      url = "github:sodiboo/niri-flake";
-      # inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     # Stylix
     stylix = {
       url = "github:danth/stylix";
@@ -73,7 +67,6 @@
     home-manager,
     nixos-hardware,
     spicetify-nix,
-    niri,
     stylix,
     aagl,
     ...
@@ -92,7 +85,6 @@
           modules
           ++ [
             home-manager.nixosModules.home-manager
-            niri.nixosModules.niri
             aagl.nixosModules.default
             stylix.nixosModules.stylix
             {
