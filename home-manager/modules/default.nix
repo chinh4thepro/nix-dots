@@ -59,7 +59,6 @@
       vesktop
 
       # Terminal Multiplexer
-      zellij
       tmux
 
       # Nix Tools

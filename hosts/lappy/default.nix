@@ -1,10 +1,12 @@
 { pkgs, ...}: {
   imports = [
     ./hardware-configuration.nix
+    ../../default/games
     ../../default/gui/hyprland.nix
     ../../default/nixos
+    ../../default/nixos/fprintd.nix
+    ../../default/nixos/syncthing.nix
     ../../default/style
-    ../../default/games
   ];
 
   # Boot

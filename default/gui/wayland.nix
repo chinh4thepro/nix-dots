@@ -8,6 +8,7 @@
     polkit_gnome
     nautilus
     brightnessctl
+    imv
   ];
 
   systemd = {

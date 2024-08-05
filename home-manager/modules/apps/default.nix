@@ -1,7 +1,7 @@
 {...}: {
   imports = [
     ./kitty
-    ./spotify
     ./media.nix
+    ./anki.nix
   ];
 }

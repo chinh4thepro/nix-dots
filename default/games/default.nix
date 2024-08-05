@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   imports = [
     ./aagl.nix
+    ./minecraft.nix
   ];
 
   programs = {
@@ -8,8 +9,6 @@
   };
 
   environment.systemPackages = with pkgs; [
-    prismlauncher
-    graalvm-ce
     mangohud
   ];
 }

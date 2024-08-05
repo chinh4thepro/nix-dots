@@ -12,7 +12,4 @@
     wget
     home-manager
   ];
-  programs = {
-    neovim.enable = true;
-  };
 }

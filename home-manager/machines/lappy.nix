@@ -7,6 +7,7 @@
     ../modules/default.nix
     ../modules/hyprland.nix
     ../modules/stylix.nix
+    ../modules/distrobox.nix
   ];
 
   home = {
