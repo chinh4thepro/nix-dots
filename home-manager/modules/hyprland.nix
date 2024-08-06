@@ -1,13 +1,25 @@
 {
   config,
   pkgs,
+  split-monitor-workspaces,
   ...
 }: {
   wayland.windowManager.hyprland = {
     enable = true;
+    #plugins = [
+    #  split-monitor-workspaces.packages.${pkgs.system}.split-monitor-workspaces
+    #];
     settings = {
       monitor = ",preferred,auto,1";
       
+     # plugin = {
+     #   split-monitor-workspaces = {
+     #     count = 10;
+     #     keep_focused = 0;
+     #     enable_notifications = 0;
+     #   };
+     # };
+
       exec-once = [
         "hyprpaper"
 	      "brightnessctl set 50%"

@@ -31,6 +31,8 @@
       tree
       ffmpeg-full
       unrar
+      pipx
+      direnv
 
       # Coding
       rustup

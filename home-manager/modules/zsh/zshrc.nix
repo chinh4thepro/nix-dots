@@ -71,6 +71,8 @@ in {
       export ZPLUG_LOADFILE=$HOME/.zpackages.zsh
       typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 
+      export PATH="$PATH:$HOME/.local/bin"
+
       # Do the initialization when the script is sourced (i.e. Initialize instantly)
       ZVM_INIT_MODE=sourcing
 

@@ -44,8 +44,14 @@
 
     # Hyprland
     hyprland = {
-      url = "github:hyprwm/Hyprland";
+      url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
       # inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # split-monitor-workspaces
+    split-monitor-workspaces = {
+      url = "github:Duckonaut/split-monitor-workspaces";
+      inputs.hyprland.follows = "hyprland";
     };
 
     # An anime game launcher
@@ -69,6 +75,7 @@
     spicetify-nix,
     stylix,
     aagl,
+    split-monitor-workspaces,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -90,7 +97,7 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.extraSpecialArgs = {inherit inputs outputs spicetify-nix;};
+              home-manager.extraSpecialArgs = {inherit inputs outputs spicetify-nix split-monitor-workspaces;};
             }
           ];
         specialArgs = {inherit inputs outputs;};
