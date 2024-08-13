@@ -131,6 +131,13 @@
           home-manager.users.chinh4thepro = ./home-manager/machines/lappy.nix;
 	}
       ];
+      # Desktop
+      berry = mkNixos [
+        ./hosts/berry
+	{
+          home-manager.users.chinh4thepro = ./home-manager/machines/berry.nix;
+	}
+      ];
     };
 
     darwinConfigurations = {
