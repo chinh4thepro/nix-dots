@@ -21,4 +21,15 @@
     adwaita-qt6
     pavucontrol
   ];
+
+  programs = {
+    firefox = {
+      enable = true;
+      preferences = {
+        "browser.fullscreen.autoHide" = false;
+        "browser.aboutConfig.showWarning" = false;
+        "trailhead.firstrun.didSeeAboutWelcome" = true;
+      };
+    };
+  };
 }

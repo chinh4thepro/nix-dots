@@ -1,4 +1,4 @@
-{config, lib, ...}: 
+{config, lib, ...}:
 with config.stylix.fonts;
 let
   colorNames = [
@@ -22,7 +22,6 @@ let
 
   colors = config.lib.stylix.colors.withHashtag;
   defineColor = name: value: "@define-color ${name} ${value};";
-  markup = color: text: "<span color=\"${color}\" style=\"oblique\">${text}</span>";
 in
 {
   stylix.targets.waybar.enable = false;
