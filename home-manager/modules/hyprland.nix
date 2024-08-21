@@ -11,7 +11,7 @@
     #];
     settings = {
       monitor = ",preferred,auto,1";
-      
+
      # plugin = {
      #   split-monitor-workspaces = {
      #     count = 10;
@@ -22,9 +22,10 @@
 
       exec-once = [
         "hyprpaper"
-	      "brightnessctl set 50%"
+	    "brightnessctl set 50%"
+		"ags"
       ];
-     
+
       general = {
         gaps_in = "5";
 	      gaps_out = "10";
@@ -45,7 +46,7 @@
       gestures = {
         workspace_swipe = "true";
       };
-      
+
       "$mod" = "SUPER";
       bindm = [
         "$mod, mouse:272, movewindow"
@@ -58,7 +59,7 @@
 	      "$mod SHIFT, S, exec, grimblast --cursor --freeze copy area"
 	      "$mod, F, fullscreen"
 	      "$mod, RETURN, exec, kitty"
-        "$mod, D, exec, wofi --show drun"
+          "$mod, D, exec, wofi --show drun"
 	      "$mod, mouse_down, workspace, e+1"
 	      "$mod, mouse_up, workspace, e-1"
 	      "$mod, left, movefocus, l"

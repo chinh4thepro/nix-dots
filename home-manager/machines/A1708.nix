@@ -4,7 +4,7 @@
   imports = [
     ../modules/apps
     ../modules/default.nix
-    ../modules/niri.nix
+    ../modules/hyprland.nix
   ];
 
   home = {

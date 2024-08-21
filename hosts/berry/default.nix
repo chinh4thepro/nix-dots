@@ -1,11 +1,10 @@
 { pkgs, ...}: {
   imports = [
     ./hardware-configuration.nix
-    ../../default/debug
     ../../default/games
     ../../default/gui/hyprland.nix
     ../../default/nixos
-    ../../default/nixos/syncthing.nix
+    ../../default/nixos/sync.nix
     ../../default/style
   ];
 
@@ -57,6 +56,9 @@
       sha256 = "FKadcLtrnvFoFO+iQGB7oQa/5kpoUm034Sn4z9iWUHY=";
     };
   };
+
+  # Enable opencl
+  hardware.amdgpu.opencl.enable = true;
 
   system.stateVersion = "24.05";
 }

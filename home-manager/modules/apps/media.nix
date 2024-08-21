@@ -13,6 +13,7 @@
   ++ lib.optionals stdenv.isLinux [
     amberol
     mpv
+    playerctl
   ];
   programs = {
     zathura = {

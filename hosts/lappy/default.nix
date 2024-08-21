@@ -6,7 +6,7 @@
     ../../default/gui/hyprland.nix
     ../../default/nixos
     ../../default/nixos/fprintd.nix
-    ../../default/nixos/syncthing.nix
+    ../../default/nixos/sync.nix
     ../../default/style
   ];
 

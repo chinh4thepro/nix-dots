@@ -25,9 +25,9 @@ in {
       goToSong
       showQueueDuration
     ];
-    enabledSnippets = with spicePkgs.snippets; [
-      remove-top-spacing
-    ];
+    #enabledSnippets = with spicePkgs.snippets; [
+    #  remove-top-spacing
+    #];
   };
   imports = [
     spicetify-nix.homeManagerModules.default

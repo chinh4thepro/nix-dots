@@ -2,6 +2,7 @@
   imports = [
     ./aagl.nix
     ./minecraft.nix
+    ./steam.nix
   ];
 
   programs = {
@@ -10,5 +11,6 @@
 
   environment.systemPackages = with pkgs; [
     mangohud
+    gamescope
   ];
 }

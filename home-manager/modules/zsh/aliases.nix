@@ -31,11 +31,13 @@ in {
     }
     // optionalAttrs isLinux {
       rebuild = "sudo nixos-rebuild switch --flake .";
+      rebuild-update = "sudo nixos-rebuild switch --recreate-lock-file --flake .";
       scrot = "${pkgs.grim}/bin/grim \"desktop-$(date +\"%Y%m%d%H%M\").png\"";
       xclip = "tee >(${pkgs.wl-clipboard}/bin/wl-copy) | ${pkgs.wl-clipboard}/bin/wl-copy -p";
     }
     // optionalAttrs isDarwin {
       rebuild = "darwin-rebuild switch --flake .";
+      rebuild-update = "darwin-rebuild switch --recreate-lock-file --flake .";
       xclip = "pbcopy";
       ding = "osascript -e 'display notification \"command done\"'";
     };

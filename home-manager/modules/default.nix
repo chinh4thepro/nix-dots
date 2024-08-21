@@ -39,7 +39,6 @@
       tree-sitter
       tree-sitter-grammars.tree-sitter-cpp
       gcc
-      vscodium
       zed-editor
 
       # Shell

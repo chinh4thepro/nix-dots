@@ -34,7 +34,7 @@ in
     ];
   };
 
-  home.file.".config/ags/stylix.css".text = lib.strings.concatStringsSep "\n"
+  home.file.".config/ags/styles/stylix.css".text = lib.strings.concatStringsSep "\n"
     (
       builtins.map (color: defineColor color colors.${color}) colorNames
     );
