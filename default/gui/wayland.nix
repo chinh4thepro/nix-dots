@@ -41,5 +41,6 @@
     GDK_BACKEND = "wayland";
     QT_QPA_PLATFORM = "wayland;xcb";
     QT_QPA_PLATFORMTHEME = "qt5ct";
+    ANKI_WAYLAND = "1";
   };
 }

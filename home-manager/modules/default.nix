@@ -36,8 +36,6 @@
 
       # Coding
       rustup
-      tree-sitter
-      tree-sitter-grammars.tree-sitter-cpp
       gcc
       zed-editor
 
@@ -52,7 +50,6 @@
 
       # Internet
       yt-dlp
-      gping
       wget
       curl
       rsync

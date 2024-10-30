@@ -4,7 +4,6 @@ let
 in {
   programs.spicetify = {
     enable = true;
-    theme = spicePkgs.themes.text;
     enabledCustomApps = with spicePkgs.apps; [
       marketplace
       newReleases

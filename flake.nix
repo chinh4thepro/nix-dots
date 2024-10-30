@@ -48,12 +48,6 @@
       # inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # split-monitor-workspaces
-    split-monitor-workspaces = {
-      url = "github:Duckonaut/split-monitor-workspaces";
-      inputs.hyprland.follows = "hyprland";
-    };
-
     # An anime game launcher
     aagl = {
       url = "github:ezKEa/aagl-gtk-on-nix";
@@ -62,7 +56,7 @@
 
     # Aylurs gtk shell
     ags = {
-      url = "github:Aylur/ags";
+      url = "github:aylur/ags/v2";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -75,7 +69,6 @@
     spicetify-nix,
     stylix,
     aagl,
-    split-monitor-workspaces,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -97,7 +90,7 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.extraSpecialArgs = {inherit inputs outputs spicetify-nix split-monitor-workspaces;};
+              home-manager.extraSpecialArgs = {inherit inputs outputs spicetify-nix;};
             }
           ];
         specialArgs = {inherit inputs outputs;};

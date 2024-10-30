@@ -5,6 +5,7 @@
     ../modules/apps
     ../modules/default.nix
     ../modules/hyprland.nix
+    ../modules/mac/hyprland.nix
   ];
 
   home = {

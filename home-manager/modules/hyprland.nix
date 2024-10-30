@@ -1,7 +1,6 @@
 {
   config,
   pkgs,
-  split-monitor-workspaces,
   ...
 }: {
   wayland.windowManager.hyprland = {
@@ -10,8 +9,6 @@
     #  split-monitor-workspaces.packages.${pkgs.system}.split-monitor-workspaces
     #];
     settings = {
-      monitor = ",preferred,auto,1";
-
      # plugin = {
      #   split-monitor-workspaces = {
      #     count = 10;
@@ -48,10 +45,12 @@
       };
 
       "$mod" = "SUPER";
+
       bindm = [
         "$mod, mouse:272, movewindow"
-	      "$mod, mouse:273, resizewindow"
+	    "$mod, mouse:273, resizewindow"
       ];
+
       bind = [
 	      "$mod SHIFT, Q, killactive"
 	      "$mod SHIFT, E, exit,"
@@ -95,6 +94,6 @@
   ];
 
   imports = [
-    ./waybar.nix
+    ./ags.nix
   ];
 }
