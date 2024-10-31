@@ -1,37 +1,32 @@
 {config, ...}: {
   imports = [
-    ./zshrc.nix
     ./aliases.nix
-    ./zprofile.nix
   ];
   programs.zsh = {
     enable = true;
-    enableCompletion = true;
-    autosuggestion.enable = true;
-    syntaxHighlighting.enable = true;
-    autocd = true;
+    defaultKeymap = "emacs";
 
-    initExtraBeforeCompInit = ''
-      fpath+=(${config.home.profileDirectory}/share/zsh/site-functions)
-    '';
+    autocd = true;
+    autosuggestion.enable = true;
+    enableCompletion = true;
+    syntaxHighlighting.enable = true;
+
+    oh-my-zsh = {
+      enable = true;
+      theme = "gentoo";
+      plugins = [
+        "git"
+      ];
+    };
 
     history = {
       expireDuplicatesFirst = true;
       ignoreDups = true;
       ignoreAllDups = true;
-      ignoreSpace = true; # ignore commands starting with a space
+      ignoreSpace = true;
       save = 20000;
       size = 20000;
       share = true;
     };
-
-    oh-my-zsh = {
-      enable = true;
-      plugins = [
-        "git"
-      ];
-      theme = "gentoo";
-    };
   };
 }
-
