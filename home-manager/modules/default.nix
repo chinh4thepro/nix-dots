@@ -32,18 +32,10 @@
       ffmpeg-full
       unrar
       pipx
-      direnv
 
       # Coding
-      rustup
       gcc
       zed-editor
-
-      # Shell
-      any-nix-shell
-
-      # Extra theming
-      pywal16
 
       # Files
       p7zip
