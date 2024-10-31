@@ -1,5 +1,10 @@
-{pkgs, lib, inputs, spicetify-nix, ...}:
-let
+{
+  pkgs,
+  lib,
+  inputs,
+  spicetify-nix,
+  ...
+}: let
   spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
 in {
   programs.spicetify = {

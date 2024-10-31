@@ -20,19 +20,19 @@
         terminal = 12;
       };
       serif = {
-        package = pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; };
+        package = pkgs.nerdfonts.override {fonts = ["FantasqueSansMono"];};
         name = "fantasque sans m nerd font";
       };
       sansSerif = {
-        package = pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; };
+        package = pkgs.nerdfonts.override {fonts = ["FantasqueSansMono"];};
         name = "fantasque sans m nerd font";
       };
       monospace = {
-        package = pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; };
+        package = pkgs.nerdfonts.override {fonts = ["FantasqueSansMono"];};
         name = "fantasque sans m nerd font";
       };
       emoji = {
-        package = pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; };
+        package = pkgs.nerdfonts.override {fonts = ["FantasqueSansMono"];};
         name = "Noto Color Emoji";
       };
     };

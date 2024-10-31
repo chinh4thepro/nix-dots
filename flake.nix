@@ -72,7 +72,7 @@
     ...
   } @ inputs: let
     inherit (self) outputs;
-     forAllSystems = nixpkgs.lib.genAttrs [
+    forAllSystems = nixpkgs.lib.genAttrs [
       "aarch64-linux"
       "x86_64-linux"
       "aarch64-darwin"
@@ -112,24 +112,24 @@
       # Macbook Pro A1708
       A1708 = mkNixos [
         nixos-hardware.nixosModules.apple-macbook-pro-14-1
-	    ./hosts/A1708
-	    {
-	      home-manager.users.chinh4thepro = ./home-manager/machines/A1708.nix;
-	    }
+        ./hosts/A1708
+        {
+          home-manager.users.chinh4thepro = ./home-manager/machines/A1708.nix;
+        }
       ];
       # Lenovo Ideapad 15alc6
       lappy = mkNixos [
         ./hosts/lappy
-	{
+        {
           home-manager.users.chinh4thepro = ./home-manager/machines/lappy.nix;
-	}
+        }
       ];
       # Desktop
       berry = mkNixos [
         ./hosts/berry
-	{
+        {
           home-manager.users.chinh4thepro = ./home-manager/machines/berry.nix;
-	}
+        }
       ];
     };
 
@@ -138,12 +138,12 @@
       A1708-MACOS = mkDarwin "x86_64-darwin" [
         {
           home-manager.users.chinh4thepro = ./home-manager/machines/A1708-MACOS.nix;
-	      home-manager.useGlobalPkgs = true;
-	      home-manager.useUserPackages = true;
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
           home-manager.extraSpecialArgs = {inherit inputs outputs spicetify-nix;};
         }
         home-manager.darwinModules.home-manager
-	    ./hosts/A1708-MACOS
+        ./hosts/A1708-MACOS
       ];
     };
 

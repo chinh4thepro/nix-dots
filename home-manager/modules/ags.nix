@@ -1,6 +1,11 @@
-{config, lib, inputs, pkgs, ...}:
-with config.stylix.fonts;
-let
+{
+  config,
+  lib,
+  inputs,
+  pkgs,
+  ...
+}:
+with config.stylix.fonts; let
   colorNames = [
     "base00"
     "base01"
@@ -22,9 +27,8 @@ let
 
   colors = config.lib.stylix.colors.withHashtag;
   defineColor = name: value: "@define-color ${name} ${value};";
-in
-{
-  imports = [ inputs.ags.homeManagerModules.default ];
+in {
+  imports = [inputs.ags.homeManagerModules.default];
 
   programs.ags = {
     enable = true;
@@ -41,11 +45,11 @@ in
       inputs.ags.packages.${pkgs.system}.powerprofiles
       inputs.ags.packages.${pkgs.system}.tray
       inputs.ags.packages.${pkgs.system}.wireplumber
-
     ];
   };
 
-  home.file.".config/ags/styles/stylix.css".text = lib.strings.concatStringsSep "\n"
+  home.file.".config/ags/styles/stylix.css".text =
+    lib.strings.concatStringsSep "\n"
     (
       builtins.map (color: defineColor color colors.${color}) colorNames
     );

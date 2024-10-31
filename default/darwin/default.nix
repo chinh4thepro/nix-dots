@@ -43,19 +43,20 @@ in {
     gc = {
       automatic = true;
       interval = {
-        Weekday = 0; Hour = 0; Minute = 0;
+        Weekday = 0;
+        Hour = 0;
+        Minute = 0;
       };
       options = "--delete-older-than 6d";
     };
-    extraOptions =
-      ''
-        # Determinate systems options
-        build-users-group = nixbld
-        bash-prompt-prefix = (nix:$name)\040
-        max-jobs = auto
-        extra-nix-path = nixpkgs=flake:nixpkgs
-        experimental-features = nix-command flakes repl-flake
-      '';
+    extraOptions = ''
+      # Determinate systems options
+      build-users-group = nixbld
+      bash-prompt-prefix = (nix:$name)\040
+      max-jobs = auto
+      extra-nix-path = nixpkgs=flake:nixpkgs
+      experimental-features = nix-command flakes repl-flake
+    '';
     registry.nixpkgs.flake = nixpkgs;
   };
 

@@ -1,7 +1,5 @@
 {
-  inputs,
   lib,
-  config,
   pkgs,
   ...
 }: {
@@ -35,6 +33,7 @@
 
       # Coding
       gcc
+      vscode
       zed-editor
 
       # Files
@@ -52,6 +51,7 @@
 
       # Nix Tools
       alejandra
+      nixd
     ]
     ++ lib.optionals stdenv.isDarwin [
       coreutils

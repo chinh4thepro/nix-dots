@@ -1,6 +1,9 @@
-{config, lib, ...}:
-with config.stylix.fonts;
-let
+{
+  config,
+  lib,
+  ...
+}:
+with config.stylix.fonts; let
   colorNames = [
     "base00"
     "base01"
@@ -22,8 +25,7 @@ let
 
   colors = config.lib.stylix.colors.withHashtag;
   defineColor = name: value: "@define-color ${name} ${value};";
-in
-{
+in {
   stylix.targets.waybar.enable = false;
 
   programs.waybar = {
@@ -34,9 +36,9 @@ in
         position = "bottom";
         height = 50;
         spacing = 10;
-        modules-left = [ "hyprland/workspaces" ];
-        modules-center = [ "clock" ];
-        modules-right = [ "pulseaudio" "backlight" "battery" "tray" ];
+        modules-left = ["hyprland/workspaces"];
+        modules-center = ["clock"];
+        modules-right = ["pulseaudio" "backlight" "battery" "tray"];
 
         "hyprland/workspaces" = {
           active-only = false;
@@ -54,7 +56,7 @@ in
 
         "backlight" = {
           format = "{icon} {percent}%";
-         format-icons = ["" "" "" "" "" "" "" "" ""];
+          format-icons = ["" "" "" "" "" "" "" "" ""];
         };
 
         "battery" = {
@@ -93,28 +95,28 @@ in
         };
       };
     };
-    style = ''
-      * {
-        font-family: "${sansSerif.name}";
-        font-size: ${builtins.toString sizes.desktop}pt;
-      }
+    style =
+      ''
+        * {
+          font-family: "${sansSerif.name}";
+          font-size: ${builtins.toString sizes.desktop}pt;
+        }
 
-      window#waybar {
-        margin: 10px;
-        border: 2px solid @base0D;
-        background: alpha(@base00, ${with config.stylix.opacity; builtins.toString desktop});
-      }
+        window#waybar {
+          margin: 10px;
+          border: 2px solid @base0D;
+          background: alpha(@base00, ${with config.stylix.opacity; builtins.toString desktop});
+        }
 
-      .modules-left > widget:first-child > * {
-        margin-left: 5px;
-      }
+        .modules-left > widget:first-child > * {
+          margin-left: 5px;
+        }
 
-      .modules-right > widget:last-child > * {
-        margin-right: 5px;
-      }
-    ''
-    +
-    lib.strings.concatStringsSep "\n"
+        .modules-right > widget:last-child > * {
+          margin-right: 5px;
+        }
+      ''
+      + lib.strings.concatStringsSep "\n"
       (
         builtins.map (color: defineColor color colors.${color}) colorNames
       );

@@ -1,5 +1,8 @@
-{pkgs, lib, ...}: {
-
+{
+  pkgs,
+  lib,
+  ...
+}: {
   home = {
     username = "chinh4thepro";
     homeDirectory = "/Users/chinh4thepro";
@@ -17,5 +20,4 @@
     ../modules/apps
     ../modules/office.nix
   ];
-
 }
