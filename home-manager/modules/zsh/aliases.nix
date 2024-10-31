@@ -27,13 +27,12 @@ in {
       gco = "git commit";
       gaa = "git add -A";
       szsh = "source ~/.zshrc";
+      update = "nix flake update";
     }
     // optionalAttrs isLinux {
       rebuild = "sudo nixos-rebuild switch --flake .";
-      rebuild-update = "sudo nixos-rebuild switch --recreate-lock-file --flake .";
     }
     // optionalAttrs isDarwin {
       rebuild = "darwin-rebuild switch --flake .";
-      rebuild-update = "darwin-rebuild switch --recreate-lock-file --flake .";
     };
 }
