@@ -3,6 +3,7 @@
     ./aagl.nix
     ./minecraft.nix
     ./steam.nix
+    ./nix-gaming.nix
   ];
 
   programs = {

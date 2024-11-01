@@ -59,6 +59,12 @@
       url = "github:aylur/ags/v2";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # Nix-Gaming
+    nix-gaming = {
+      url = "github:fufexan/nix-gaming";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
