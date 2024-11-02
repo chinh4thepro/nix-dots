@@ -4,9 +4,10 @@
   ...
 }: {
   imports = [
-    ./git.nix
-    ./zsh
     ./fonts.nix
+    ./git.nix
+    ./tmux.nix
+    ./zsh
   ];
 
   nixpkgs = {
@@ -45,9 +46,6 @@
       curl
       rsync
       vesktop
-
-      # Terminal Multiplexer
-      tmux
 
       # Nix Tools
       alejandra
