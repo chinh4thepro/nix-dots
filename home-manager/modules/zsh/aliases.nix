@@ -3,7 +3,6 @@
   pkgs,
   ...
 }: let
-  inherit (lib.lists) optionals;
   inherit (lib.attrsets) optionalAttrs;
   inherit (pkgs.stdenv) isLinux isDarwin;
 in {

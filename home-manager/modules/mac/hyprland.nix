@@ -1,8 +1,4 @@
-{
-  config,
-  pkgs,
-  ...
-}: {
+{...}: {
   wayland.windowManager.hyprland = {
     settings = {
       monitor = ",highres,auto,1.333333";
