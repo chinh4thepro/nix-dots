@@ -26,7 +26,7 @@
 
   services = {
     greetd = {
-        enable = true;
+      enable = true;
     };
   };
 

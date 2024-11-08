@@ -6,7 +6,7 @@
     autoEnable = true;
 
     targets = {
-        regreet.enable = false;
+      regreet.enable = false;
     };
 
     polarity = "dark";
