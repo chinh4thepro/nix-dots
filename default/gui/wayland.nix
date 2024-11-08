@@ -24,9 +24,14 @@
     };
   };
 
-  services.displayManager.sddm = {
-    enable = true;
-    wayland.enable = true;
+  services = {
+    greetd = {
+        enable = true;
+    };
+  };
+
+  programs = {
+    regreet.enable = true;
   };
 
   environment.sessionVariables = {

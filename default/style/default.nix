@@ -5,6 +5,10 @@
     enable = true;
     autoEnable = true;
 
+    targets = {
+        regreet.enable = false;
+    };
+
     polarity = "dark";
     opacity = {
       applications = 0.75;
