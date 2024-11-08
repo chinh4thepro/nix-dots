@@ -7,6 +7,11 @@
       alsa.support32Bit = true;
       pulse.enable = true;
     };
+    logind = {
+        extraConfig = ''
+            HandlePowerKey=ignore
+        '';
+    };
     upower.enable = true;
   };
 
