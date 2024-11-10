@@ -8,9 +8,9 @@
       pulse.enable = true;
     };
     logind = {
-        extraConfig = ''
-            HandlePowerKey=ignore
-        '';
+      extraConfig = ''
+        HandlePowerKey=ignore
+      '';
     };
     upower.enable = true;
   };

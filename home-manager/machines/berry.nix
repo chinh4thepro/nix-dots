@@ -1,8 +1,4 @@
-{
-  config,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   imports = [
     ../modules/apps
     ../modules/apps/davinci.nix
@@ -17,14 +13,10 @@
     username = "chinh4thepro";
     homeDirectory = "/home/chinh4thepro";
     stateVersion = "24.05";
-    enableNixpkgsReleaseCheck = false;
+    enableNixpkgsReleaseCheck = true;
   };
 
-  programs = {
-    home-manager = {
-      enable = true;
-    };
-  };
+  programs.home-manager.enable = true;
 
   stylix = {
     image = pkgs.fetchurl {

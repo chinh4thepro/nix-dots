@@ -20,7 +20,7 @@
       exec-once = [
         "hyprpaper"
         "brightnessctl set 50%"
-        "ags"
+        "ags run"
       ];
 
       general = {

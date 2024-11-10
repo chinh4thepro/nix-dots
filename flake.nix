@@ -113,7 +113,7 @@
         inherit modules pkgs;
         extraSpecialArgs = {inherit inputs outputs;};
       };
-  in rec {
+  in {
     nixosConfigurations = {
       # Macbook Pro A1708
       A1708 = mkNixos [

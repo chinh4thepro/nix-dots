@@ -1,8 +1,4 @@
-{
-  config,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   imports = [
     ../modules/apps
     ../modules/ags.nix
@@ -19,11 +15,7 @@
     enableNixpkgsReleaseCheck = false;
   };
 
-  programs = {
-    home-manager = {
-      enable = true;
-    };
-  };
+  programs.home-manager.enable = true;
 
   stylix = {
     image = pkgs.fetchurl {
