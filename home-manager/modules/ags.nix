@@ -45,6 +45,7 @@ in {
       inputs.ags.packages.${pkgs.system}.powerprofiles
       inputs.ags.packages.${pkgs.system}.tray
       inputs.ags.packages.${pkgs.system}.wireplumber
+      fzf
     ];
   };
 
