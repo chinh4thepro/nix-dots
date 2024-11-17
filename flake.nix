@@ -56,7 +56,7 @@
 
     # Aylurs gtk shell
     ags = {
-      url = "github:aylur/ags/v2";
+      url = "github:aylur/ags";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
