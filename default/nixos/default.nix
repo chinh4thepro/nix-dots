@@ -34,7 +34,5 @@
     '';
   };
 
-  services.fstrim.enable = true;
-
   system.stateVersion = "25.05";
 }

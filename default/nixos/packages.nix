@@ -4,6 +4,7 @@
     just
     wget
     home-manager
+    kdiskmark
   ];
 
   programs = {
