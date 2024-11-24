@@ -19,7 +19,6 @@
   # Networking
   networking = {
     hostName = "A1708";
-    networkmanager.enable = true;
   };
 
   # Services

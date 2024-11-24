@@ -3,6 +3,7 @@
     ./packages.nix
     ./users.nix
     ./locale.nix
+    ./network.nix
   ];
 
   nixpkgs = {

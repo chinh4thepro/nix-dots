@@ -38,7 +38,6 @@
   # Networking
   networking = {
     hostName = "lappy";
-    networkmanager.enable = true;
   };
 
   # Services

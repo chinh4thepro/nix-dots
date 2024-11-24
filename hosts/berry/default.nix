@@ -36,7 +36,6 @@
   # Networking
   networking = {
     hostName = "berry";
-    networkmanager.enable = true;
   };
 
   # Services

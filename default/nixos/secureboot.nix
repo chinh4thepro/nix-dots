@@ -3,7 +3,6 @@
   lib,
   ...
 }: {
-
   environment.systemPackages = [
     pkgs.sbctl
   ];
