@@ -1,4 +1,10 @@
 {pkgs, ...}: {
+  imports = [
+    ./dbus.nix
+    ./input.nix
+    ./kanata.nix
+  ];
+
   services = {
     printing.enable = true;
     pipewire = {
@@ -13,6 +19,7 @@
       '';
     };
     upower.enable = true;
+    xserver.desktopManager.runXdgAutostartIfNone = true;
   };
 
   security.rtkit.enable = true;

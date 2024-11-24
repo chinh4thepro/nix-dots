@@ -21,6 +21,8 @@
         "hyprpaper"
         "brightnessctl set 50%"
         "ags run"
+        "fcitx5 -d -r"
+        "fcitx5-remote -r"
       ];
 
       general = {
@@ -43,6 +45,10 @@
       gestures = {
         workspace_swipe = "true";
       };
+
+      windowrule = [
+        "pseudo, fcitx"
+      ];
 
       "$mod" = "SUPER";
 

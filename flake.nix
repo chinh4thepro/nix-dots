@@ -71,6 +71,12 @@
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # Lanzaboote
+    lanzaboote = {
+      url = "github:nix-community/lanzaboote";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -81,6 +87,7 @@
     spicetify-nix,
     stylix,
     aagl,
+    lanzaboote,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -99,6 +106,7 @@
             home-manager.nixosModules.home-manager
             aagl.nixosModules.default
             stylix.nixosModules.stylix
+            lanzaboote.nixosModules.lanzaboote
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;

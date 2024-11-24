@@ -12,7 +12,7 @@
   home = {
     username = "chinh4thepro";
     homeDirectory = "/home/chinh4thepro";
-    stateVersion = "24.05";
+    stateVersion = "25.05";
     enableNixpkgsReleaseCheck = true;
   };
 
@@ -20,8 +20,8 @@
 
   stylix = {
     image = pkgs.fetchurl {
-      url = "https://raw.githubusercontent.com/chinh4thepro/walls/main/miku/miku.jpg";
-      sha256 = "FKadcLtrnvFoFO+iQGB7oQa/5kpoUm034Sn4z9iWUHY=";
+      url = "https://raw.githubusercontent.com/chinh4thepro/walls/main/sclera/sanctuary.jpg";
+      sha256 = "1dFK2rAlnolhBxEjBQPDUeuELnqslWcn882d4u+Yqos=";
     };
   };
 }

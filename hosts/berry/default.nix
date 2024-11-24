@@ -4,7 +4,7 @@
     ../../default/games
     ../../default/gui/hyprland.nix
     ../../default/nixos
-    ../../default/nixos/sync.nix
+    ../../default/nixos/secureboot.nix
     ../../default/style
   ];
 
@@ -52,13 +52,13 @@
   # Stylix image
   stylix = {
     image = pkgs.fetchurl {
-      url = "https://raw.githubusercontent.com/chinh4thepro/walls/main/miku/miku.jpg";
-      sha256 = "FKadcLtrnvFoFO+iQGB7oQa/5kpoUm034Sn4z9iWUHY=";
+      url = "https://raw.githubusercontent.com/chinh4thepro/walls/main/sclera/sanctuary.jpg";
+      sha256 = "1dFK2rAlnolhBxEjBQPDUeuELnqslWcn882d4u+Yqos=";
     };
   };
 
   # Enable opencl
   hardware.amdgpu.opencl.enable = true;
 
-  system.stateVersion = "24.05";
+  system.stateVersion = "25.05";
 }

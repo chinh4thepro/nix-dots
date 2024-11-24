@@ -2,7 +2,7 @@
   home = {
     username = "chinh4thepro";
     homeDirectory = "/Users/chinh4thepro";
-    stateVersion = "22.11";
+    stateVersion = "25.05";
     enableNixpkgsReleaseCheck = true;
   };
 

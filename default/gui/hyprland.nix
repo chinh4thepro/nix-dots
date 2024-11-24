@@ -1,8 +1,6 @@
 {pkgs, ...}: {
   imports = [
     ./default.nix
-    ./dbus.nix
-    ./kanata.nix
     ./xdg.nix
     ./wayland.nix
   ];
