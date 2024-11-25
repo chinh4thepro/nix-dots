@@ -50,6 +50,7 @@
       # Nix Tools
       alejandra
       nixd
+      nil
     ]
     ++ lib.optionals stdenv.isDarwin [
       coreutils

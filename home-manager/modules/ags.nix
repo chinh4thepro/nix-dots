@@ -26,7 +26,7 @@ with config.stylix.fonts; let
   ];
 
   colors = config.lib.stylix.colors.withHashtag;
-  defineColor = name: value: "@define-color ${name} ${value};";
+  defineColor = name: value: "$" + "${name}: ${value};";
 in {
   imports = [inputs.ags.homeManagerModules.default];
 
@@ -49,7 +49,7 @@ in {
     ];
   };
 
-  home.file.".config/ags/styles/stylix.css".text =
+  home.file.".config/ags/styles/stylix.scss".text =
     lib.strings.concatStringsSep "\n"
     (
       builtins.map (color: defineColor color colors.${color}) colorNames
