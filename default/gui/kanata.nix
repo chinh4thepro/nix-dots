@@ -5,6 +5,7 @@
       internalKeyboard = {
         devices = [
           "/dev/input/by-path/pci-0000:00:1e.3-platform-pxa2xx-spi.3-cs-00-event-kbd" # MBP 2017 keyboard
+          "/dev/input/by-id/usb-Keychron_Keychron_V1-event-kbd" # Keychron V1
         ];
         extraDefCfg = "process-unmapped-keys yes";
         config = ''

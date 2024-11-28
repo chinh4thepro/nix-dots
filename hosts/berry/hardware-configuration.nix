@@ -23,10 +23,18 @@
     options = ["discard" "noatime"];
   };
 
-  boot.initrd.luks.devices."luks-473d7c51-f394-4466-8da7-fa5359a5a904".device = "/dev/disk/by-uuid/473d7c51-f394-4466-8da7-fa5359a5a904";
-  boot.initrd.luks.devices."luks-473d7c51-f394-4466-8da7-fa5359a5a904".allowDiscards = true;
-  boot.initrd.luks.devices."luks-117625a8-c469-4174-92e1-583893130004".device = "/dev/disk/by-uuid/117625a8-c469-4174-92e1-583893130004";
-  boot.initrd.luks.devices."luks-117625a8-c469-4174-92e1-583893130004".allowDiscards = true;
+  boot.initrd.luks.devices = {
+    "luks-473d7c51-f394-4466-8da7-fa5359a5a904" = {
+      device = "/dev/disk/by-uuid/473d7c51-f394-4466-8da7-fa5359a5a904";
+      allowDiscards = true;
+      preLVM = true;
+    };
+    "luks-117625a8-c469-4174-92e1-583893130004" = {
+      device = "/dev/disk/by-uuid/117625a8-c469-4174-92e1-583893130004";
+      allowDiscards = true;
+      preLVM = true;
+    };
+  };
 
   fileSystems."/boot" = {
     device = "/dev/disk/by-uuid/FB8A-A47C";

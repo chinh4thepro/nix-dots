@@ -34,7 +34,6 @@
 
       # Coding
       gcc
-      vscode
       zed-editor
 
       # Files
