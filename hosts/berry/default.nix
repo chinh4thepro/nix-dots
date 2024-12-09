@@ -43,7 +43,10 @@
 
   # Services
   services = {
-    fstrim.enable = true;
+    fstrim = {
+      enable = true;
+      interval = "daily";
+    };
     openssh.enable = true;
   };
 

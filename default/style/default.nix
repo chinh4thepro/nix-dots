@@ -9,7 +9,6 @@
       regreet.enable = false;
     };
 
-    polarity = "dark";
     opacity = {
       applications = 0.75;
       desktop = 0.75;

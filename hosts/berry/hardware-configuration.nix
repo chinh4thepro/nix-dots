@@ -27,11 +27,13 @@
       device = "/dev/disk/by-uuid/473d7c51-f394-4466-8da7-fa5359a5a904";
       allowDiscards = true;
       preLVM = true;
+      bypassWorkqueues = true;
     };
     "luks-117625a8-c469-4174-92e1-583893130004" = {
       device = "/dev/disk/by-uuid/117625a8-c469-4174-92e1-583893130004";
       allowDiscards = true;
       preLVM = true;
+      bypassWorkqueues = true;
     };
   };
 

@@ -3,7 +3,8 @@
   pkgs,
   ...
 }: {
-  home.packages = [
-    inputs.zen-browser.packages.${pkgs.system}.zen-browser
+  home.packages = with pkgs; [
+  ] ++ lib.optionals stdenv.isLinux [
+    inputs.zen-browser.packages.${pkgs.system}.default
   ];
 }
