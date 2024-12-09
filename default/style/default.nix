@@ -16,6 +16,10 @@
       popups = 0.75;
       terminal = 0.75;
     };
+    # iconTheme = {
+    #   enable = true;
+    #   package = pkgs.morewaita-icon-theme;
+    # };
     fonts = {
       sizes = {
         applications = 12;
@@ -24,19 +28,19 @@
         terminal = 12;
       };
       serif = {
-        package = pkgs.nerdfonts.override {fonts = ["FantasqueSansMono"];};
+        package = pkgs.nerd-fonts.fantasque-sans-mono;
         name = "fantasque sans m nerd font";
       };
       sansSerif = {
-        package = pkgs.nerdfonts.override {fonts = ["FantasqueSansMono"];};
+        package = pkgs.nerd-fonts.fantasque-sans-mono;
         name = "fantasque sans m nerd font";
       };
       monospace = {
-        package = pkgs.nerdfonts.override {fonts = ["FantasqueSansMono"];};
+        package = pkgs.nerd-fonts.fantasque-sans-mono;
         name = "fantasque sans m nerd font";
       };
       emoji = {
-        package = pkgs.nerdfonts.override {fonts = ["FantasqueSansMono"];};
+        package = pkgs.noto-fonts-color-emoji;
         name = "Noto Color Emoji";
       };
     };

@@ -5,7 +5,7 @@
 }: {
   imports = [
     inputs.jerry.homeManagerModules.default
-    ./spotify
+    ./spotify.nix
   ];
 
   home.packages = with pkgs;
@@ -16,8 +16,9 @@
       iina
     ]
     ++ lib.optionals stdenv.isLinux [
-      amberol
+      elisa
       mpv
+      feh
       playerctl
     ];
   programs = {

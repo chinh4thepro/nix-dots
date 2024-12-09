@@ -35,6 +35,7 @@
       # Coding
       gcc
       zed-editor
+      rustup
 
       # Files
       p7zip

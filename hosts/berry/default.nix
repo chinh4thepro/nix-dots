@@ -3,8 +3,11 @@
     ./hardware-configuration.nix
     ../../default/games
     ../../default/gui/hyprland.nix
+    ../../default/gui/sync.nix
     ../../default/nixos
+    ../../default/nixos/flatpak.nix
     ../../default/nixos/secureboot.nix
+    ../../default/nixos/virtualisation.nix
     ../../default/style
   ];
 

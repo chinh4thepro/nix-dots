@@ -2,6 +2,7 @@
   imports = [
     ../modules/apps
     ../modules/apps/davinci.nix
+    ../modules/apps/slack.nix
     ../modules/ags.nix
     ../modules/default.nix
     ../modules/hyprland.nix

@@ -77,6 +77,12 @@
       url = "github:nix-community/lanzaboote";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # NixVim
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -88,6 +94,7 @@
     stylix,
     aagl,
     lanzaboote,
+    nixvim,
     ...
   } @ inputs: let
     inherit (self) outputs;

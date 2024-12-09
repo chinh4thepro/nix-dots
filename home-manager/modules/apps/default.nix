@@ -1,6 +1,6 @@
 {...}: {
   imports = [
-    ./kitty
+    ./kitty.nix
     ./media.nix
     ./anki.nix
     ./obsidian.nix
