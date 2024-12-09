@@ -15,5 +15,6 @@
     ../modules/default.nix
     ../modules/apps
     ../modules/office.nix
+    ../modules/mac/stylix.nix
   ];
 }

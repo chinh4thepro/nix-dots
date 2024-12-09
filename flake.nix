@@ -170,6 +170,7 @@
           home-manager.extraSpecialArgs = {inherit inputs outputs spicetify-nix;};
         }
         home-manager.darwinModules.home-manager
+	stylix.darwinModules.stylix
         ./hosts/aerial
       ];
     };
