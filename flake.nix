@@ -68,7 +68,7 @@
 
     # Zen Browser
     zen-browser = {
-      url = "github:0xc000022070/zen-browser-flake";
+      url = "github:heywoodlh/flakes/main?dir=zen-browser";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -162,20 +162,20 @@
 
     darwinConfigurations = {
       # Macbook Pro A1708 (but macos)
-      A1708-MACOS = mkDarwin "x86_64-darwin" [
+      aerial = mkDarwin "x86_64-darwin" [
         {
-          home-manager.users.chinh4thepro = ./home-manager/machines/A1708-MACOS.nix;
+          home-manager.users.chinh4thepro = ./home-manager/machines/aerial.nix;
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.extraSpecialArgs = {inherit inputs outputs spicetify-nix;};
         }
         home-manager.darwinModules.home-manager
-        ./hosts/A1708-MACOS
+        ./hosts/aerial
       ];
     };
 
     homeConfigurations = {
-      "chinh4thepro@A1708-MACOS" = mkHome [./home-manager/machines/A1708-MACOS.nix] nixpkgs.legacyPackages.x86_64-darwin;
+      "chinh4thepro@aerial" = mkHome [./home-manager/machines/aerial.nix] nixpkgs.legacyPackages.x86_64-darwin;
     };
   };
 }

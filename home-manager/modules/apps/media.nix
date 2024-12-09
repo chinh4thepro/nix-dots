@@ -10,7 +10,6 @@
 
   home.packages = with pkgs;
     [
-      obs-studio
     ]
     ++ lib.optionals stdenv.isDarwin [
       iina
@@ -20,6 +19,7 @@
       mpv
       feh
       playerctl
+      obs-studio
     ];
   programs = {
     zathura = {

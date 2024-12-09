@@ -20,7 +20,6 @@ in {
     extraSpecialArgs = {inherit inputs outputs;};
     useGlobalPkgs = true;
     useUserPackages = true;
-    users.chinh4thepro = import ../../home-manager/machines/A1708-MACOS.nix;
   };
 
   users.users.chinh4thepro = {
@@ -35,8 +34,10 @@ in {
 
   nix = {
     settings = {
-      auto-optimise-store = true;
       builders-use-substitutes = true;
+    };
+    optimise = {
+      automatic = true;
     };
     gc = {
       automatic = true;
@@ -53,7 +54,7 @@ in {
       bash-prompt-prefix = (nix:$name)\040
       max-jobs = auto
       extra-nix-path = nixpkgs=flake:nixpkgs
-      experimental-features = nix-command flakes repl-flake
+      experimental-features = nix-command flakes
     '';
     registry.nixpkgs.flake = nixpkgs;
   };
