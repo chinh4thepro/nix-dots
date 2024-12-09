@@ -3,7 +3,6 @@
     enable = true;
     autoEnable = true;
 
-    polarity = "dark";
     opacity = {
       applications = 0.75;
       desktop = 0.75;
