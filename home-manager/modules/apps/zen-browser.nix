@@ -5,6 +5,6 @@
   ...
 }: {
   home.packages = [
-    zen-browser.packages.${pkgs.system}.zen-browser
+    inputs.zen-browser.packages.${pkgs.system}.zen-browser
   ];
 }
