@@ -8,6 +8,7 @@
 in {
   imports = [
     ./packages.nix
+    ./yabai.nix
   ];
 
   environment.systemPackages = with pkgs; [
@@ -57,6 +58,35 @@ in {
       experimental-features = nix-command flakes
     '';
     registry.nixpkgs.flake = nixpkgs;
+  };
+
+  system = {
+    keyboard = {
+      enableKeyMapping = true;
+      remapCapsLockToControl = true;
+    };
+    defaults = {
+      loginwindow.GuestEnabled = false;
+      dock = {
+        autohide = true;
+        showhidden = true;
+        persistent-apps = [
+          "/Applications/Zen Browser.app"
+          "/Applications/Home Manager Apps/Kitty.app"
+          "/Applications/Home Manager Apps/Vesktop.app"
+          "${pkgs.zed-editor}/bin/Zed.app"
+          "/System/Applications/System Settings.app"
+        ];
+      };
+
+      finder = {
+        AppleShowAllExtensions = true;
+      };
+      NSGlobalDomain = {
+        AppleICUForce24HourTime = true;
+        ApplePressAndHoldEnabled = false;
+      };
+    };
   };
 
   nixpkgs.config.allowUnfree = true;

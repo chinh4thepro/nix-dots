@@ -83,6 +83,12 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # Homebrew
+    nix-homebrew = {
+      url = "github:zhaofengli-wip/nix-homebrew";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -95,6 +101,7 @@
     aagl,
     lanzaboote,
     nixvim,
+    nix-homebrew,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -170,7 +177,8 @@
           home-manager.extraSpecialArgs = {inherit inputs outputs spicetify-nix;};
         }
         home-manager.darwinModules.home-manager
-	stylix.darwinModules.stylix
+        stylix.darwinModules.stylix
+        nix-homebrew.darwinModules.nix-homebrew
         ./hosts/aerial
       ];
     };

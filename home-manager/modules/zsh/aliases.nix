@@ -27,6 +27,7 @@ in {
       gaa = "git add -A";
       szsh = "source ~/.zshrc";
       update = "nix flake update";
+      format = "${pkgs.alejandra}/bin/alejandra";
     }
     // optionalAttrs isLinux {
       rebuild = "sudo nixos-rebuild switch --flake .";

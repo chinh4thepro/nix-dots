@@ -19,5 +19,6 @@ in {
     };
   };
 
+  networking.hostName = "aerial";
   system.stateVersion = 4;
 }
