@@ -181,10 +181,25 @@
         nix-homebrew.darwinModules.nix-homebrew
         ./hosts/aerial
       ];
+
+      # Desktop
+      aqua = mkDarwin "x86_64-darwin" [
+        {
+          home-manager.users.chinh4thepro = ./home-manager/machines/aqua.nix;
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.extraSpecialArgs = {inherit inputs outputs spicetify-nix;};
+        }
+        home-manager.darwinModules.home-manager
+        stylix.darwinModules.stylix
+        nix-homebrew.darwinModules.nix-homebrew
+        ./hosts/aqua
+      ];
     };
 
     homeConfigurations = {
       "chinh4thepro@aerial" = mkHome [./home-manager/machines/aerial.nix] nixpkgs.legacyPackages.x86_64-darwin;
+      "chinh4thepro@aqua" = mkHome [./home-manager/machines/aqua.nix] nixpkgs.legacyPackages.x86_64-darwin;
     };
   };
 }

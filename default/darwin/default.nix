@@ -73,6 +73,7 @@ in {
         autohide = true;
         showhidden = true;
         persistent-apps = [
+          "/System/Applications/Launchpad.app"
           "/Applications/Zen Browser.app"
           "/Applications/Home Manager Apps/Kitty.app"
           "/Applications/Home Manager Apps/Vesktop.app"
