@@ -4,7 +4,7 @@
       enable = true;
       enableScriptingAddition = true;
       config = {
-        auto_balance = "on";
+        auto_balance = "off";
         layout = "bsp";
         top_padding = 10;
         bottom_padding = 10;
@@ -12,7 +12,7 @@
         right_padding = 10;
         window_gap = 5;
         mouse_follows_focus = "on";
-        focus_follows_mouse = "on";
+        focus_follows_mouse = "autofocus";
         mouse_modifier = "fn";
         window_topmost = "off";
         window_shadow = "float";

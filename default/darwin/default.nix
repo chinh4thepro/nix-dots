@@ -66,7 +66,9 @@ in {
       remapCapsLockToControl = true;
     };
     defaults = {
+      chime = false;
       loginwindow.GuestEnabled = false;
+      spaces.spans-displays = false;
       dock = {
         autohide = true;
         showhidden = true;
@@ -78,7 +80,6 @@ in {
           "/System/Applications/System Settings.app"
         ];
       };
-
       finder = {
         AppleShowAllExtensions = true;
       };
