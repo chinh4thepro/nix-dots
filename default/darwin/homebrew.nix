@@ -5,18 +5,19 @@
     enable = true;
     onActivation.cleanup = "zap";
 
+    taps = [
+      "nikitabobko/tap"
+      "FelixKratz/formulae"
+    ];
+
     brews = [
       "mas"
       "python"
       "python-tk"
-    ];
-
-    taps = [
-      "nikitabobko/tap"
+      "borders"
     ];
 
     casks = [
-      "aerospace"
       "zen-browser"
       "raycast"
     ];
