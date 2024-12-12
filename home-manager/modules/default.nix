@@ -34,8 +34,8 @@
 
       # Coding
       gcc
-      zed-editor
       rustup
+      zed-editor
 
       # Files
       p7zip
@@ -56,7 +56,6 @@
       coreutils
       wifi-password
       time
-      raycast
       neofetch
       stats
     ]

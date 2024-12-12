@@ -1,5 +1,6 @@
 {
   pkgs,
+  config,
   inputs,
   outputs,
   ...
@@ -7,9 +8,12 @@
   inherit (inputs) nixpkgs;
 in {
   imports = [
+    ./homebrew.nix
     ./packages.nix
     ./yabai.nix
   ];
+
+  security.pam.enableSudoTouchIdAuth = true;
 
   environment.systemPackages = with pkgs; [
     neovim
@@ -66,18 +70,20 @@ in {
       remapCapsLockToControl = true;
     };
     defaults = {
-      chime = false;
       loginwindow.GuestEnabled = false;
       spaces.spans-displays = false;
+      screencapture.location = "~/Pictures/screenshots";
       dock = {
         autohide = true;
         showhidden = true;
+        mru-spaces = false;
         persistent-apps = [
           "/System/Applications/Launchpad.app"
           "/Applications/Zen Browser.app"
-          "/Applications/Home Manager Apps/Kitty.app"
-          "/Applications/Home Manager Apps/Vesktop.app"
-          "${pkgs.zed-editor}/bin/Zed.app"
+          "${config.users.users.chinh4thepro.home}/Applications/Home Manager Apps/kitty.app"
+          "${config.users.users.chinh4thepro.home}/Applications/Home Manager Apps/Spotify.app"
+          "${config.users.users.chinh4thepro.home}/Applications/Home Manager Apps/Vesktop.app"
+          "${config.users.users.chinh4thepro.home}/Applications/Home Manager Apps/Zed.app"
           "/System/Applications/System Settings.app"
         ];
       };
@@ -87,6 +93,7 @@ in {
       NSGlobalDomain = {
         AppleICUForce24HourTime = true;
         ApplePressAndHoldEnabled = false;
+        NSWindowShouldDragOnGesture = true;
       };
     };
   };
