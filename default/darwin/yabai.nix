@@ -1,4 +1,4 @@
-{...}: {
+{config, ...}: {
   services = {
     yabai = {
       enable = true;
@@ -21,6 +21,9 @@
         active_window_opacity = 1.0;
         normal_window_opacity = 0.75;
       };
+      extraConfig = ''
+        borders active_color=${config.lib.stylix.colors.base0D} inactive_color=${config.lib.stylix.colors.base03} width=3.0 &
+      '';
     };
     skhd = {
       enable = true;
