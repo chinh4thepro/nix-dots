@@ -10,13 +10,13 @@
 
   home.packages = with pkgs;
     [
+      mpv
     ]
     ++ lib.optionals stdenv.isDarwin [
       iina
     ]
     ++ lib.optionals stdenv.isLinux [
       elisa
-      mpv
       feh
       playerctl
       obs-studio
