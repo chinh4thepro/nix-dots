@@ -15,6 +15,7 @@
       "python"
       "python-tk"
       "borders"
+      "gnu-sed"
     ];
 
     casks = [

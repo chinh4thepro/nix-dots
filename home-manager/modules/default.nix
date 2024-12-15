@@ -58,7 +58,6 @@
       time
       neofetch
       stats
-      gnused
     ]
     ++ lib.optionals stdenv.isLinux [
       protonvpn-gui

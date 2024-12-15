@@ -28,6 +28,7 @@
     jerry = {
       enable = true;
       config = {
+        player = "mpv";
         provider = "allanime";
         manga_format = "pdf";
         manga_opener = "zathura";
