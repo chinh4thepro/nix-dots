@@ -5,7 +5,7 @@
     #  split-monitor-workspaces.packages.${pkgs.system}.split-monitor-workspaces
     #];
     settings = {
-      monitor = ",preferred,auto,auto";
+      monitor = ",preferred,auto,1";
 
       # plugin = {
       #   split-monitor-workspaces = {
@@ -24,9 +24,9 @@
       ];
 
       general = {
-        gaps_in = "5";
-        gaps_out = "10";
-        border_size = "2";
+        gaps_in = "15";
+        gaps_out = "20";
+        border_size = "10";
       };
 
       decoration = {
