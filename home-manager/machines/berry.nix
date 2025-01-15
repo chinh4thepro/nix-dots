@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{...}: {
   imports = [
     ../modules/apps
     ../modules/apps/davinci.nix

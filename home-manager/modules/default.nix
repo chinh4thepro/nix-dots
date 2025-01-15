@@ -10,12 +10,6 @@
     ./zsh
   ];
 
-  nixpkgs = {
-    config = {
-      allowUnfree = true;
-    };
-  };
-
   home.packages = with pkgs;
     [
       # CLI Tools

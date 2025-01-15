@@ -135,6 +135,12 @@
         extraSpecialArgs = {inherit inputs outputs;};
       };
   in {
+    nixpkgs = {
+      config = {
+        allowUnfree = true;
+      };
+    };
+
     nixosConfigurations = {
       # Macbook Pro A1708
       A1708 = mkNixos [
@@ -151,12 +157,13 @@
           home-manager.users.chinh4thepro = ./home-manager/machines/lappy.nix;
         }
       ];
-      # Framework 13
+      # Framework 13 amd 7040
       aurora = mkNixos [
-	./hosts/aurora
-	{
-	  home-manager.users.chinh4thepro = ./home-manager/machines/aurora.nix;
-	}	
+        ./hosts/aurora
+        nixos-hardware.nixosModules.framework-13-7040-amd
+        {
+          home-manager.users.chinh4thepro = ./home-manager/machines/aurora.nix;
+        }
       ];
       # Desktop
       berry = mkNixos [

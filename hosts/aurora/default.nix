@@ -43,6 +43,7 @@
   services = {
     fstrim.enable = true;
     openssh.enable = true;
+    fwupd.enable = true;
   };
 
   # Nix options
