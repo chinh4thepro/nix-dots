@@ -5,6 +5,8 @@
     #  split-monitor-workspaces.packages.${pkgs.system}.split-monitor-workspaces
     #];
     settings = {
+      monitor = ",preferred,auto,1";
+
       # plugin = {
       #   split-monitor-workspaces = {
       #     count = 10;
@@ -31,7 +33,7 @@
         rounding = "0";
         blur = {
           enabled = "true";
-          size = "3";
+          size = "4";
           passes = "3";
         };
       };
