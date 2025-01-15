@@ -5,7 +5,7 @@
     #  split-monitor-workspaces.packages.${pkgs.system}.split-monitor-workspaces
     #];
     settings = {
-      monitor = ",preferred,auto,1";
+      monitor = ",preferred,auto,auto";
 
       # plugin = {
       #   split-monitor-workspaces = {
