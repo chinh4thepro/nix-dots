@@ -12,10 +12,10 @@
       popups = 0.75;
       terminal = 0.75;
     };
-    # iconTheme = {
-    #   enable = true;
-    #   package = pkgs.morewaita-icon-theme;
-    # };
+    iconTheme = {
+      enable = true;
+      package = pkgs.morewaita-icon-theme;
+    };
     fonts = {
       sizes = {
         applications = 12;
