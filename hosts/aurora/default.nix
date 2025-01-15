@@ -4,6 +4,7 @@
     ../../default/games
     ../../default/gui/hyprland.nix
     ../../default/nixos
+    ../../default/nixos/fprintd.nix
     ../../default/style
   ];
 
