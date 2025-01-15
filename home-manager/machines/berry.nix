@@ -18,11 +18,4 @@
   };
 
   programs.home-manager.enable = true;
-
-  stylix = {
-    image = pkgs.fetchurl {
-      url = "https://raw.githubusercontent.com/chinh4thepro/walls/main/sclera/sanctuary.jpg";
-      sha256 = "1dFK2rAlnolhBxEjBQPDUeuELnqslWcn882d4u+Yqos=";
-    };
-  };
 }
