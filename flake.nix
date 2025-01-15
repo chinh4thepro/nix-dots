@@ -151,6 +151,13 @@
           home-manager.users.chinh4thepro = ./home-manager/machines/lappy.nix;
         }
       ];
+      # Framework 13
+      aurora = mkNixos [
+	./hosts/aurora
+	{
+	  home-manager.users.chinh4thepro = ./home-manager/machines/aurora.nix;
+	}	
+      ];
       # Desktop
       berry = mkNixos [
         ./hosts/berry
