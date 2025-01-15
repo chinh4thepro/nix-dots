@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   imports = [
     ./hardware-configuration.nix
+    ../../default/debug
     ../../default/games
     ../../default/gui/hyprland.nix
     ../../default/nixos
