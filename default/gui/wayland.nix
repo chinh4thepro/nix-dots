@@ -3,9 +3,15 @@
     wlr-randr
     wl-clipboard
     polkit_gnome
+    gnome-calculator
+    gnome-clocks
+    gnome-calendar
+    gnome-weather
+    gnome-system-monitor
+    loupe
     nautilus
     brightnessctl
-    imv
+    file-roller
   ];
 
   systemd = {

@@ -2,6 +2,7 @@
   imports = [
     ./hardware-configuration.nix
     ../../default/games
+    ../../default/gui/cups.nix
     ../../default/gui/hyprland.nix
     ../../default/gui/sync.nix
     ../../default/nixos
