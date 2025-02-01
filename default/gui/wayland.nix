@@ -12,6 +12,8 @@
     nautilus
     brightnessctl
     file-roller
+    adwaita-icon-theme
+    morewaita-icon-theme
   ];
 
   systemd = {

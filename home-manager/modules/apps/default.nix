@@ -8,5 +8,6 @@
     ./zen-browser.nix
     ./kicad.nix
     ./slack.nix
+    ./graphics.nix
   ];
 }
