@@ -30,4 +30,6 @@
       };
     };
   };
+
+  users.users.chinh4thepro.extraGroups = ["input" "uinput"];
 }
