@@ -1,4 +1,12 @@
 {pkgs, ...}: {
+  home.packages = with pkgs; [
+    wofi
+  ];
+
+  imports = [
+    ./quickshell.nix
+  ];
+
   wayland.windowManager.hyprland = {
     enable = true;
     settings = {
@@ -84,8 +92,4 @@
         );
     };
   };
-
-  home.packages = with pkgs; [
-    wofi
-  ];
 }
