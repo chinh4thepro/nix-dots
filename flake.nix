@@ -54,10 +54,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # Aylurs gtk shell
-    ags = {
-      url = "github:aylur/ags";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     # Nix-Gaming
@@ -142,22 +138,7 @@
     };
 
     nixosConfigurations = {
-      # Macbook Pro A1708
-      A1708 = mkNixos [
-        nixos-hardware.nixosModules.apple-macbook-pro-14-1
-        ./hosts/A1708
-        {
-          home-manager.users.chinh4thepro = ./home-manager/machines/A1708.nix;
-        }
-      ];
-      # Lenovo Ideapad 15alc6
-      lappy = mkNixos [
-        ./hosts/lappy
-        {
-          home-manager.users.chinh4thepro = ./home-manager/machines/lappy.nix;
-        }
-      ];
-      # Framework 13 amd 7040
+      # Framework 13
       aurora = mkNixos [
         ./hosts/aurora
         nixos-hardware.nixosModules.framework-13-7040-amd
@@ -165,46 +146,13 @@
           home-manager.users.chinh4thepro = ./home-manager/machines/aurora.nix;
         }
       ];
-      # Desktop
-      berry = mkNixos [
-        ./hosts/berry
-        {
-          home-manager.users.chinh4thepro = ./home-manager/machines/berry.nix;
-        }
       ];
     };
 
     darwinConfigurations = {
-      # Macbook Pro A1708 (but macos)
-      aerial = mkDarwin "x86_64-darwin" [
-        {
-          home-manager.users.chinh4thepro = ./home-manager/machines/aerial.nix;
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.extraSpecialArgs = {inherit inputs outputs spicetify-nix;};
-        }
-        home-manager.darwinModules.home-manager
-        stylix.darwinModules.stylix
-        ./hosts/aerial
-      ];
-
-      # Desktop
-      aqua = mkDarwin "x86_64-darwin" [
-        {
-          home-manager.users.chinh4thepro = ./home-manager/machines/aqua.nix;
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.extraSpecialArgs = {inherit inputs outputs spicetify-nix;};
-        }
-        home-manager.darwinModules.home-manager
-        stylix.darwinModules.stylix
-        ./hosts/aqua
-      ];
     };
 
     homeConfigurations = {
-      "chinh4thepro@aerial" = mkHome [./home-manager/machines/aerial.nix] nixpkgs.legacyPackages.x86_64-darwin;
-      "chinh4thepro@aqua" = mkHome [./home-manager/machines/aqua.nix] nixpkgs.legacyPackages.x86_64-darwin;
     };
   };
 }
