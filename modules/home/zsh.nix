@@ -1,4 +1,8 @@
-{lib,pkgs,...}: let
+{
+  lib,
+  pkgs,
+  ...
+}: let
   inherit (lib.attrsets) optionalAttrs;
   inherit (pkgs.stdenv) isLinux isDarwin;
 in {
