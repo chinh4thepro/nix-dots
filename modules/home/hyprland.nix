@@ -39,9 +39,9 @@
         workspace_swipe = "true";
       };
 
-      #windowrule = [
-      #  "pseudo, fcitx"
-      #];
+      windowrule = [
+        "pseudo, fcitx"
+      ];
 
       "$mod" = "SUPER";
 
