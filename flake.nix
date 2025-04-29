@@ -81,14 +81,15 @@
 
   outputs = {
     self,
-    nixpkgs,
+    aagl,
     home-manager,
+    lanzaboote,
     nixos-hardware,
+    nixpkgs,
+    nixvim,
     spicetify-nix,
     stylix,
-    aagl,
-    lanzaboote,
-    nixvim,
+    quickshell,
     ...
   } @ inputs: let
     inherit (self) outputs;
