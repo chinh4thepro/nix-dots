@@ -1,24 +1,11 @@
 {pkgs, ...}: {
   wayland.windowManager.hyprland = {
     enable = true;
-    #plugins = [
-    #  split-monitor-workspaces.packages.${pkgs.system}.split-monitor-workspaces
-    #];
     settings = {
       monitor = ",preferred,auto,1";
-
-      # plugin = {
-      #   split-monitor-workspaces = {
-      #     count = 10;
-      #     keep_focused = 0;
-      #     enable_notifications = 0;
-      #   };
-      # };
-
       exec-once = [
         "hyprpaper"
         "brightnessctl set 50%"
-        "ags run"
         "fcitx5 -d -r"
         "fcitx5-remote -r"
       ];
@@ -44,9 +31,9 @@
         workspace_swipe = "true";
       };
 
-      windowrule = [
-        "pseudo, fcitx"
-      ];
+      #windowrule = [
+      #  "pseudo, fcitx"
+      #];
 
       "$mod" = "SUPER";
 

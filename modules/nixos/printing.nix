@@ -12,4 +12,6 @@
       openFirewall = true;
     };
   };
+
+  users.users.chinh4thepro.extraGroups = ["lpadmin"];
 }

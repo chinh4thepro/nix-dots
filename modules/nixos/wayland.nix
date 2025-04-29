@@ -1,4 +1,17 @@
 {pkgs, ...}: {
+  environment.sessionVariables = {
+    ANKI_WAYLAND = "1";
+    CLUTTER_BACKEND = "wayland";
+    GDK_BACKEND = "wayland";
+    GSETTINGS_SCHEMA_DIR = "${pkgs.gsettings-desktop-schemas}/share/gsettings-schemas/${pkgs.gsettings-desktop-schemas.name}/glib-2.0/schemas";
+    GTK_USE_PORTAL = "1";
+    NIXOS_OZONE_WL = "1";
+    POLKIT_AUTH_AGENT = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
+    QT_QPA_PLATFORM = "wayland;xcb";
+    QT_QPA_PLATFORMTHEME = "qt5ct";
+    XDG_SESSION_TYPE = "wayland";
+  };
+
   environment.systemPackages = with pkgs; [
     wlr-randr
     wl-clipboard
@@ -38,20 +51,7 @@
     };
   };
 
-  programs = {
-    regreet.enable = true;
-  };
-
-  environment.sessionVariables = {
-    POLKIT_AUTH_AGENT = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
-    GSETTINGS_SCHEMA_DIR = "${pkgs.gsettings-desktop-schemas}/share/gsettings-schemas/${pkgs.gsettings-desktop-schemas.name}/glib-2.0/schemas";
-    NIXOS_OZONE_WL = "1";
-    CLUTTER_BACKEND = "wayland";
-    GTK_USE_PORTAL = "1";
-    GDK_BACKEND = "wayland";
-    QT_QPA_PLATFORM = "wayland;xcb";
-    QT_QPA_PLATFORMTHEME = "qt5ct";
-    ANKI_WAYLAND = "1";
-    XDG_SESSION_TYPE = "wayland";
-  };
+  #programs = {
+  #  regreet.enable = true;
+  #};
 }

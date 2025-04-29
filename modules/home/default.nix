@@ -1,9 +1,8 @@
 {lib, pkgs, ...}: {
   imports = [
-    ../modules/apps
-    ../modules/default.nix
-    ../modules/hyprland.nix
-    ../modules/mac/hyprland.nix
+    ./fonts.nix
+    ./git.nix
+    ./zsh.nix
   ];
 
   home = {

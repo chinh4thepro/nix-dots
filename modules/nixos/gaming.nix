@@ -1,11 +1,12 @@
 {inputs, pkgs, ...}: {
-  environment.systemPackages = [
+  environment.systemPackages = with pkgs; [
     gamescope
     graalvm-ce
     inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
     mangohud
     prismlauncher
   ];
+
   hardware.steam-hardware.enable = true;
 
   nix.settings = {

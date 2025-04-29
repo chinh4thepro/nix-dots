@@ -141,7 +141,7 @@
         ./hosts/aurora
         nixos-hardware.nixosModules.framework-13-7040-amd
         {
-          home-manager.users.chinh4thepro = ./modules/home;
+          home-manager.users.chinh4thepro = ./modules/home/config/laptop.nix;
         }
       ];
     };
