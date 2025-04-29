@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   imports = [
-  #  ./wayland.nix
     ./gui.nix
+    ./wayland.nix
   ];
 
   nix.settings = {

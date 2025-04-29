@@ -1,5 +1,4 @@
 {pkgs, ...}: {
-  # Internationalisation
   i18n.inputMethod = {
     enabled = "fcitx5";
     # enabled = "true";

@@ -1,14 +1,13 @@
 {pkgs, ...}: {
   environment.sessionVariables = {
     ANKI_WAYLAND = "1";
-    CLUTTER_BACKEND = "wayland";
     GDK_BACKEND = "wayland";
     GSETTINGS_SCHEMA_DIR = "${pkgs.gsettings-desktop-schemas}/share/gsettings-schemas/${pkgs.gsettings-desktop-schemas.name}/glib-2.0/schemas";
     GTK_USE_PORTAL = "1";
     NIXOS_OZONE_WL = "1";
     POLKIT_AUTH_AGENT = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
     QT_QPA_PLATFORM = "wayland;xcb";
-    QT_QPA_PLATFORMTHEME = "qt5ct";
+    QT_QPA_PLATFORMTHEME = "qt6ct";
     XDG_SESSION_TYPE = "wayland";
   };
 
@@ -51,7 +50,7 @@
     };
   };
 
-  #programs = {
-  #  regreet.enable = true;
-  #};
+  programs = {
+    regreet.enable = true;
+  };
 }
