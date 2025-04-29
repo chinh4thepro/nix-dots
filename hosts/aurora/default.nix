@@ -1,38 +1,9 @@
 {pkgs, ...}: {
   imports = [
     ./hardware-configuration.nix
-    ../../default/games
-    ../../default/gui/cups.nix
-    ../../default/gui/hyprland.nix
-    ../../default/gui/sync.nix
-    ../../default/nixos
-    ../../default/style
+    ../modules/nixos/config/laptop.nix
+    ../modules/nixos/debug.nix
   ];
-
-  # Boot
-  boot = {
-    kernelPackages = pkgs.linuxPackages_latest;
-    loader = {
-      systemd-boot.enable = true;
-      efi.canTouchEfiVariables = true;
-      systemd-boot.configurationLimit = 10;
-      timeout = 0;
-    };
-    plymouth = {
-      enable = true;
-    };
-    consoleLogLevel = 0;
-    initrd.verbose = false;
-    kernelParams = [
-      "quiet"
-      "splash"
-      "boot.shell_on_fail"
-      "loglevel=3"
-      "rd.systemd.show_status=false"
-      "rd.udev.log_level=3"
-      "udev.log_priority=3"
-    ];
-  };
 
   # Networking
   networking = {
@@ -41,14 +12,7 @@
 
   # Services
   services = {
-    fstrim.enable = true;
-    openssh.enable = true;
     fwupd.enable = true;
-  };
-
-  # Nix options
-  nix = {
-    distributedBuilds = true;
   };
 
   # Stylix image
@@ -59,5 +23,6 @@
     };
   };
 
+  # System
   system.stateVersion = "25.05";
 }

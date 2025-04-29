@@ -2,13 +2,39 @@
   description = "chinh's nixos config";
 
   inputs = {
-    # Nixpkgs
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    # An anime game launcher
+    aagl = {
+      url = "github:ezKEa/aagl-gtk-on-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # Home manager
     home-manager = {
       url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # Hyprland
+    hyprland = {
+      url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+      # inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # Jerry
+    jerry = {
+      url = "github:justchokingaround/jerry";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # Lanzaboote
+    lanzaboote = {
+      url = "github:nix-community/lanzaboote";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # Nix-Gaming
+    nix-gaming = {
+      url = "github:fufexan/nix-gaming";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -18,15 +44,19 @@
       # inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # Darwin/MacOS
-    darwin = {
-      url = "github:lnl7/nix-darwin";
+    # Nixpkgs
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+
+    # NixVim
+    nixvim = {
+      url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # Jerry
-    jerry = {
-      url = "github:justchokingaround/jerry";
+    # Quickshell
+    quickshell = {
+      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -42,41 +72,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # Hyprland
-    hyprland = {
-      url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-      # inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    # An anime game launcher
-    aagl = {
-      url = "github:ezKEa/aagl-gtk-on-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    };
-
-    # Nix-Gaming
-    nix-gaming = {
-      url = "github:fufexan/nix-gaming";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     # Zen Browser
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    # Lanzaboote
-    lanzaboote = {
-      url = "github:nix-community/lanzaboote";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    # NixVim
-    nixvim = {
-      url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -143,9 +141,8 @@
         ./hosts/aurora
         nixos-hardware.nixosModules.framework-13-7040-amd
         {
-          home-manager.users.chinh4thepro = ./home-manager/machines/aurora.nix;
+          home-manager.users.chinh4thepro = ./modules/home;
         }
-      ];
       ];
     };
 

@@ -1,7 +1,6 @@
 {...}: {
   imports = [
     ../modules/apps
-    ../modules/ags.nix
     ../modules/default.nix
     ../modules/hyprland.nix
     ../modules/stylix.nix

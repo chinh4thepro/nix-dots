@@ -3,8 +3,7 @@
   users.users.chinh4thepro = {
     isNormalUser = true;
     description = "chinh4thepro";
-    extraGroups = ["networkmanager" "wheel" "input" "uinput" "libvirtd" "lpadmin"];
+    extraGroups = ["networkmanager" "wheel"];
     shell = pkgs.zsh;
-    uid = 1000;
   };
 }

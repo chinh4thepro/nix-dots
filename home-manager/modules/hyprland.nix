@@ -101,8 +101,4 @@
   home.packages = with pkgs; [
     wofi
   ];
-
-  imports = [
-    ./ags.nix
-  ];
 }
