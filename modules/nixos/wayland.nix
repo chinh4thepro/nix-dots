@@ -7,7 +7,7 @@
     NIXOS_OZONE_WL = "1";
     POLKIT_AUTH_AGENT = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
     QT_QPA_PLATFORM = "wayland;xcb";
-    QT_QPA_PLATFORMTHEME = "qt6ct";
+    QT_QPA_PLATFORMTHEME = "qt5ct";
     XDG_SESSION_TYPE = "wayland";
   };
 
