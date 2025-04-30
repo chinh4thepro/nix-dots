@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
     nil
+    qmljs
   ];
 
   programs.zed-editor = {
@@ -10,6 +11,7 @@
       "git-firefly"
       "zig"
       "scss"
+      "qml"
     ];
     userSettings = {
       languages = {
