@@ -47,6 +47,7 @@
   services = {
     greetd = {
       enable = true;
+      enableGnomeKeyring = true;
     };
   };
 

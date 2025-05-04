@@ -18,10 +18,6 @@
       touchpad.disableWhileTyping = true;
       touchpad.clickMethod = "clickfinger";
     };
-    gnome = {
-      gnome-keyring.enable = true;
-      sushi.enable = true;
-    };
     gvfs.enable = true;
     hypridle = {
       enable = true;

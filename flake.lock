@@ -901,6 +901,26 @@
         "type": "github"
       }
     },
+    "nix-qml-support": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1730724501,
+        "narHash": "sha256-zvNdomPM86fUf0iAwJV1RQC8yAqDCKbCDJKIs4iIPy0=",
+        "owner": "outfoxxed",
+        "repo": "nix-qml-support",
+        "rev": "8f897ffb4a1575252c536c63db8be72f22b6a494",
+        "type": "github"
+      },
+      "original": {
+        "owner": "outfoxxed",
+        "repo": "nix-qml-support",
+        "type": "github"
+      }
+    },
     "nixos-hardware": {
       "locked": {
         "lastModified": 1745955289,
@@ -1124,6 +1144,7 @@
         "jerry": "jerry",
         "lanzaboote": "lanzaboote",
         "nix-gaming": "nix-gaming",
+        "nix-qml-support": "nix-qml-support",
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs_2",
         "nixpkgs-unstable": "nixpkgs-unstable",

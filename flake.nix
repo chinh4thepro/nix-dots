@@ -59,6 +59,10 @@
       url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-qml-support = {
+      url = "github:outfoxxed/nix-qml-support";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # Spicetify
     spicetify-nix = {
@@ -87,6 +91,7 @@
     nixos-hardware,
     nixpkgs,
     nixvim,
+    nix-qml-support,
     spicetify-nix,
     stylix,
     quickshell,

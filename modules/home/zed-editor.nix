@@ -1,7 +1,7 @@
-{pkgs, ...}: {
+{inputs, pkgs, ...}: {
   home.packages = with pkgs; [
     nil
-    qmljs
+    inputs.nix-qml-support.packages.${pkgs.system}.tree-sitter-qmljs
   ];
 
   programs.zed-editor = {
