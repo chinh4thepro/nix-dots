@@ -28,17 +28,24 @@
     morewaita-icon-theme
   ];
 
-  security.pam.services.greetd.enableGnomeKeyring = true;
-  security.pam.services.regreet.enableGnomeKeyring = true;
+  #security.pam.services.greetd.enableGnomeKeyring = true;
+  #security.pam.services.regreet.enableGnomeKeyring = true;
+  security.pam.services.sddm.enableGnomeKeyring = true;
 
   services = {
+    displayManager = {
+      sddm = {
+        enable = true;
+        wayland.enable = true;
+      };
+    };
     gnome = {
       gnome-keyring.enable = true;
       sushi.enable = true;
     };
-    greetd = {
-      enable = true;
-    };
+    #greetd = {
+    #  enable = true;
+    #};
   };
 
   systemd = {
@@ -58,7 +65,7 @@
   };
 
   programs = {
-    regreet.enable = true;
+    # regreet.enable = true;
     ssh.startAgent = true;
   };
 }
