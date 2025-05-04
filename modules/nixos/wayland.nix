@@ -28,9 +28,7 @@
     morewaita-icon-theme
   ];
 
-  #security.pam.services.greetd.enableGnomeKeyring = true;
-  #security.pam.services.regreet.enableGnomeKeyring = true;
-  security.pam.services.sddm.enableGnomeKeyring = true;
+  security.pam.services.login.enableGnomeKeyring = true;
 
   services = {
     displayManager = {
