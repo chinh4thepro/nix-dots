@@ -29,6 +29,7 @@
   ];
 
   security.pam.services.greetd.enableGnomeKeyring = true;
+  security.pam.services.regreet.enableGnomeKeyring = true;
 
   services = {
     gnome = {
