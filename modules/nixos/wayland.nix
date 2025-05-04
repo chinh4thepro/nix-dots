@@ -28,6 +28,14 @@
     morewaita-icon-theme
   ];
 
+  security.pam.services.greetd.enableGnomeKeyring = true;
+
+  services = {
+    greetd = {
+      enable = true;
+    };
+  };
+
   systemd = {
     user.services.polkit-gnome-authentication-agent-1 = {
       description = "polkit-gnome-authentication-agent-1";
@@ -41,13 +49,6 @@
         RestartSec = 1;
         TimeoutStopSec = 10;
       };
-    };
-  };
-
-  services = {
-    greetd = {
-      enable = true;
-      enableGnomeKeyring = true;
     };
   };
 
