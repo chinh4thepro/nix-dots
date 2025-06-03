@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{lib, pkgs, ...}: {
   home.packages = with pkgs; [
     wofi
   ];
@@ -9,6 +9,7 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
+    systemd.enable = lib.mkForce false;
     settings = {
       monitor = ",preferred,auto,1";
       exec-once = [

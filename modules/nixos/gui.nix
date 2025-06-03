@@ -25,6 +25,5 @@
       '';
     };
     upower.enable = true;
-    xserver.desktopManager.runXdgAutostartIfNone = true;
   };
 }

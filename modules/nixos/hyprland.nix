@@ -25,11 +25,11 @@
   };
 
   xdg = {
-    autostart.enable = true;
     portal = {
       enable = true;
       extraPortals = [
         pkgs.xdg-desktop-portal-gtk
+        pkgs.gnome-keyring
       ];
     };
   };
@@ -44,6 +44,16 @@
     };
     hyprlock = {
       enable = true;
+    };
+    uwsm = {
+      enable = true;
+      waylandCompositors = {
+        hyprland = {
+          prettyName = "Hyprland";
+          comment = "Hyprland compositor managed by UWSM";
+          binPath = "/run/current-system/sw/bin/Hyprland";
+        };
+      };
     };
   };
 
