@@ -2,6 +2,7 @@
   imports = [
     ./hardware-configuration.nix
     ../../modules/nixos/config/laptop.nix
+    ../../modules/nixos/debug.nix
   ];
 
   # Networking
