@@ -17,11 +17,11 @@
   # Stylix image
   stylix = {
     image = pkgs.fetchurl {
-      url = "https://raw.githubusercontent.com/chinh4thepro/walls/refs/heads/main/jellyfish/jellyfish.jpg";
-      sha256 = "iYGzGjPbEpxTsb8LTN9ZVkdkW/ix+1IqoR5KH3AINaE=";
+      url = "https://raw.githubusercontent.com/chinh4thepro/walls/refs/heads/main/may-25/may-25.jpg";
+      sha256 = "xzJNmhhXY6bwtPCu6RrClFxbRDkjmUjdHahy2LCVK00=";
     };
   };
 
   # System
-  system.stateVersion = "25.05";
+  system.stateVersion = "25.11";
 }
