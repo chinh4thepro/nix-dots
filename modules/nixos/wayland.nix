@@ -3,7 +3,7 @@
     ANKI_WAYLAND = "1";
     POLKIT_AUTH_AGENT = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
     QT_QPA_PLATFORM = "wayland;xcb";
-    QT_QPA_PLATFORMTHEME = "qt5ct";
+    # QT_QPA_PLATFORMTHEME = "qt5ct";
   };
 
   environment.systemPackages = with pkgs; [

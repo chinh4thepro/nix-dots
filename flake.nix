@@ -14,12 +14,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # Hyprland
-    hyprland = {
-      url = "github:hyprwm/Hyprland";
-      # inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     # Jerry
     jerry = {
       url = "github:justchokingaround/jerry";
@@ -29,6 +23,12 @@
     # Lanzaboote
     lanzaboote = {
       url = "github:nix-community/lanzaboote";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # MangoWC
+    mangowc = {
+      url = "github:DreamMaoMao/mangowc";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -88,6 +88,7 @@
     aagl,
     home-manager,
     lanzaboote,
+    mangowc,
     nixos-hardware,
     nixpkgs,
     nixvim,
@@ -115,9 +116,12 @@
             stylix.nixosModules.stylix
             lanzaboote.nixosModules.lanzaboote
             {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.extraSpecialArgs = {inherit inputs outputs spicetify-nix;};
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                extraSpecialArgs = {inherit inputs outputs spicetify-nix;};
+                backupFileExtension = "bak";
+              };
             }
           ];
         specialArgs = {inherit inputs outputs;};

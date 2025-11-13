@@ -2,7 +2,7 @@
   imports = [
     ../apps.nix
     ../default.nix
-    ../hyprland.nix
+    ../mangowc.nix
   ];
 
   home = {
